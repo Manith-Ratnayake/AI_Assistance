@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "FrT8eYgRvPSaqQQ4SNFQO0ObpWcYP7spUL0IrFL4iWQ=",
+  "Hash": "iGTU+AFZ5tvu0fZNjk61ZLfi+ELoUiVEN58r17DwKyE=",
   "Source": "FlintecChatBotApp",
   "BasePath": "/",
   "Mode": "Root",
@@ -10,19 +10,19 @@
     {
       "Name": "FlintecChatBotApp\\wwwroot",
       "Source": "FlintecChatBotApp",
-      "ContentRoot": "D:\\Git\\Chat_Bot\\ChatBotApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\",
       "BasePath": "/",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "D:\\Git\\Chat_Bot\\ChatBotApp\\obj\\Debug\\net8.0-android\\scopedcss\\bundle\\FlintecChatBotApp.styles.css",
+      "Identity": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\obj\\Debug\\net8.0-android\\scopedcss\\bundle\\FlintecChatBotApp.styles.css",
       "SourceId": "FlintecChatBotApp",
       "SourceType": "Computed",
-      "ContentRoot": "D:\\Git\\Chat_Bot\\ChatBotApp\\obj\\Debug\\net8.0-android\\scopedcss\\bundle\\",
+      "ContentRoot": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\obj\\Debug\\net8.0-android\\scopedcss\\bundle\\",
       "BasePath": "/",
-      "RelativePath": "FlintecChatBotApp.styles.css",
+      "RelativePath": "FlintecChatBotApp#[.{fingerprint}]?.styles.css",
       "AssetKind": "All",
       "AssetMode": "CurrentProject",
       "AssetRole": "Primary",
@@ -31,17 +31,19 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ApplicationBundle",
+      "Fingerprint": "6wmcqrpyln",
+      "Integrity": "5rRg6S3xT+s7QkuYxKAlCl0NpqCwlvVM0M8/BbXXFkQ=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "D:\\Git\\Chat_Bot\\ChatBotApp\\obj\\Debug\\net8.0-android\\scopedcss\\bundle\\FlintecChatBotApp.styles.css"
+      "OriginalItemSpec": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\obj\\Debug\\net8.0-android\\scopedcss\\bundle\\FlintecChatBotApp.styles.css"
     },
     {
-      "Identity": "D:\\Git\\Chat_Bot\\ChatBotApp\\obj\\Debug\\net8.0-android\\scopedcss\\projectbundle\\FlintecChatBotApp.bundle.scp.css",
+      "Identity": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\obj\\Debug\\net8.0-android\\scopedcss\\projectbundle\\FlintecChatBotApp.bundle.scp.css",
       "SourceId": "FlintecChatBotApp",
       "SourceType": "Computed",
-      "ContentRoot": "D:\\Git\\Chat_Bot\\ChatBotApp\\obj\\Debug\\net8.0-android\\scopedcss\\projectbundle\\",
+      "ContentRoot": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\obj\\Debug\\net8.0-android\\scopedcss\\projectbundle\\",
       "BasePath": "/",
-      "RelativePath": "FlintecChatBotApp.bundle.scp.css",
+      "RelativePath": "FlintecChatBotApp#[.{fingerprint}]!.bundle.scp.css",
       "AssetKind": "All",
       "AssetMode": "Reference",
       "AssetRole": "Primary",
@@ -50,788 +52,4503 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ProjectBundle",
+      "Fingerprint": "6wmcqrpyln",
+      "Integrity": "5rRg6S3xT+s7QkuYxKAlCl0NpqCwlvVM0M8/BbXXFkQ=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "D:\\Git\\Chat_Bot\\ChatBotApp\\obj\\Debug\\net8.0-android\\scopedcss\\projectbundle\\FlintecChatBotApp.bundle.scp.css"
+      "OriginalItemSpec": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\obj\\Debug\\net8.0-android\\scopedcss\\projectbundle\\FlintecChatBotApp.bundle.scp.css"
     },
     {
-      "Identity": "D:\\Git\\Chat_Bot\\ChatBotApp\\wwwroot\\Countries\\australia.png",
+      "Identity": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\Countries\\australia.png",
       "SourceId": "FlintecChatBotApp",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\Chat_Bot\\ChatBotApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\",
       "BasePath": "/",
-      "RelativePath": "Countries/australia.png",
+      "RelativePath": "Countries/australia#[.{fingerprint}]?.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "3la2p1ttxm",
+      "Integrity": "Fw8oxQrMOqAZoi/owntibNhQNdwuIml1IHV0+rOITdU=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Countries\\australia.png"
     },
     {
-      "Identity": "D:\\Git\\Chat_Bot\\ChatBotApp\\wwwroot\\Countries\\austria.png",
+      "Identity": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\Countries\\austria.png",
       "SourceId": "FlintecChatBotApp",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\Chat_Bot\\ChatBotApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\",
       "BasePath": "/",
-      "RelativePath": "Countries/austria.png",
+      "RelativePath": "Countries/austria#[.{fingerprint}]?.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "9bskfh6orb",
+      "Integrity": "VX97HTi5ed8F8EaqNfULwue6RBjR05tkElQ1YLZUs0E=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Countries\\austria.png"
     },
     {
-      "Identity": "D:\\Git\\Chat_Bot\\ChatBotApp\\wwwroot\\Countries\\brazil.png",
+      "Identity": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\Countries\\brazil.png",
       "SourceId": "FlintecChatBotApp",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\Chat_Bot\\ChatBotApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\",
       "BasePath": "/",
-      "RelativePath": "Countries/brazil.png",
+      "RelativePath": "Countries/brazil#[.{fingerprint}]?.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "5q26qhvzk7",
+      "Integrity": "TUFZIT6YMgsbd2ZCemolsc9Tx1WBNPL0SsjsniVhKlQ=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Countries\\brazil.png"
     },
     {
-      "Identity": "D:\\Git\\Chat_Bot\\ChatBotApp\\wwwroot\\Countries\\canada.png",
+      "Identity": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\Countries\\canada.png",
       "SourceId": "FlintecChatBotApp",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\Chat_Bot\\ChatBotApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\",
       "BasePath": "/",
-      "RelativePath": "Countries/canada.png",
+      "RelativePath": "Countries/canada#[.{fingerprint}]?.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "l0tifk3kcb",
+      "Integrity": "ZdLk6C9SdzxM8R1aUOMnYNRrC0Dyb0OXOLeypyiJbVs=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Countries\\canada.png"
     },
     {
-      "Identity": "D:\\Git\\Chat_Bot\\ChatBotApp\\wwwroot\\Countries\\colombia.png",
+      "Identity": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\Countries\\colombia.png",
       "SourceId": "FlintecChatBotApp",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\Chat_Bot\\ChatBotApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\",
       "BasePath": "/",
-      "RelativePath": "Countries/colombia.png",
+      "RelativePath": "Countries/colombia#[.{fingerprint}]?.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "24eo3d2nrh",
+      "Integrity": "cnQNEHbreZwWAsjVngsBTm4eX6wlxSLVJDmxLCBlcXU=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Countries\\colombia.png"
     },
     {
-      "Identity": "D:\\Git\\Chat_Bot\\ChatBotApp\\wwwroot\\Countries\\france.png",
+      "Identity": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\Countries\\france.png",
       "SourceId": "FlintecChatBotApp",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\Chat_Bot\\ChatBotApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\",
       "BasePath": "/",
-      "RelativePath": "Countries/france.png",
+      "RelativePath": "Countries/france#[.{fingerprint}]?.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "q524oxk4ul",
+      "Integrity": "7l9B+fRqHZ9ZOFVQuMLdOS4/zDxLWdKBcDT0b6OTrkA=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Countries\\france.png"
     },
     {
-      "Identity": "D:\\Git\\Chat_Bot\\ChatBotApp\\wwwroot\\Countries\\germany.png",
+      "Identity": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\Countries\\germany.png",
       "SourceId": "FlintecChatBotApp",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\Chat_Bot\\ChatBotApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\",
       "BasePath": "/",
-      "RelativePath": "Countries/germany.png",
+      "RelativePath": "Countries/germany#[.{fingerprint}]?.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "vow9fwwwnu",
+      "Integrity": "v/yUhkdztH5ZTVM+LMTeSNFU9ztBKQcRt1LlE+uGbZE=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Countries\\germany.png"
     },
     {
-      "Identity": "D:\\Git\\Chat_Bot\\ChatBotApp\\wwwroot\\Countries\\india.png",
+      "Identity": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\Countries\\india.png",
       "SourceId": "FlintecChatBotApp",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\Chat_Bot\\ChatBotApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\",
       "BasePath": "/",
-      "RelativePath": "Countries/india.png",
+      "RelativePath": "Countries/india#[.{fingerprint}]?.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "d00wwzdf13",
+      "Integrity": "DeQFI99TaBpezUkGCxYvAbwZQJNGSULoAx9aj6Pok0M=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Countries\\india.png"
     },
     {
-      "Identity": "D:\\Git\\Chat_Bot\\ChatBotApp\\wwwroot\\Countries\\italy.png",
+      "Identity": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\Countries\\italy.png",
       "SourceId": "FlintecChatBotApp",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\Chat_Bot\\ChatBotApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\",
       "BasePath": "/",
-      "RelativePath": "Countries/italy.png",
+      "RelativePath": "Countries/italy#[.{fingerprint}]?.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "2y4rtp2vdh",
+      "Integrity": "ynIdZAv9eFAy9jtZHnVlh8JYW+2q7OAEs24o9JYTXFE=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Countries\\italy.png"
     },
     {
-      "Identity": "D:\\Git\\Chat_Bot\\ChatBotApp\\wwwroot\\Countries\\mexico.png",
+      "Identity": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\Countries\\mexico.png",
       "SourceId": "FlintecChatBotApp",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\Chat_Bot\\ChatBotApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\",
       "BasePath": "/",
-      "RelativePath": "Countries/mexico.png",
+      "RelativePath": "Countries/mexico#[.{fingerprint}]?.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "mjtn2oxbho",
+      "Integrity": "rpgtA1wtRRzxm0oGVYQTFUYPpOmdz5kKHpgCSfFMLT8=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Countries\\mexico.png"
     },
     {
-      "Identity": "D:\\Git\\Chat_Bot\\ChatBotApp\\wwwroot\\Countries\\netherlands.png",
+      "Identity": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\Countries\\netherlands.png",
       "SourceId": "FlintecChatBotApp",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\Chat_Bot\\ChatBotApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\",
       "BasePath": "/",
-      "RelativePath": "Countries/netherlands.png",
+      "RelativePath": "Countries/netherlands#[.{fingerprint}]?.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "sb3bfuhgra",
+      "Integrity": "mJzedWqgMetkdXQ80k2lpU83YtoQJfKAlTgEpyUe7Sg=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Countries\\netherlands.png"
     },
     {
-      "Identity": "D:\\Git\\Chat_Bot\\ChatBotApp\\wwwroot\\Countries\\new_zealand.png",
+      "Identity": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\Countries\\new_zealand.png",
       "SourceId": "FlintecChatBotApp",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\Chat_Bot\\ChatBotApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\",
       "BasePath": "/",
-      "RelativePath": "Countries/new_zealand.png",
+      "RelativePath": "Countries/new_zealand#[.{fingerprint}]?.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "rwmdnt5og4",
+      "Integrity": "xe9SGbqOBmTOIti5CAlWiffXqssoGzfJmnSrJj2e9yY=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Countries\\new_zealand.png"
     },
     {
-      "Identity": "D:\\Git\\Chat_Bot\\ChatBotApp\\wwwroot\\Countries\\singapore.png",
+      "Identity": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\Countries\\singapore.png",
       "SourceId": "FlintecChatBotApp",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\Chat_Bot\\ChatBotApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\",
       "BasePath": "/",
-      "RelativePath": "Countries/singapore.png",
+      "RelativePath": "Countries/singapore#[.{fingerprint}]?.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "zoljvkhkp2",
+      "Integrity": "baxkl+P51mjR3+IhDZpzKKhxxo6CbGgNSIvFzXRSnT0=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Countries\\singapore.png"
     },
     {
-      "Identity": "D:\\Git\\Chat_Bot\\ChatBotApp\\wwwroot\\Countries\\south_korea.png",
+      "Identity": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\Countries\\south_korea.png",
       "SourceId": "FlintecChatBotApp",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\Chat_Bot\\ChatBotApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\",
       "BasePath": "/",
-      "RelativePath": "Countries/south_korea.png",
+      "RelativePath": "Countries/south_korea#[.{fingerprint}]?.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "fyh51nh0rn",
+      "Integrity": "2ajWK1P9nULYdiQWgOSg7q8Bt2ObnBEW5RNlgjb/KQk=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Countries\\south_korea.png"
     },
     {
-      "Identity": "D:\\Git\\Chat_Bot\\ChatBotApp\\wwwroot\\Countries\\spain.png",
+      "Identity": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\Countries\\spain.png",
       "SourceId": "FlintecChatBotApp",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\Chat_Bot\\ChatBotApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\",
       "BasePath": "/",
-      "RelativePath": "Countries/spain.png",
+      "RelativePath": "Countries/spain#[.{fingerprint}]?.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "7hai46itp3",
+      "Integrity": "i8FEelwru9NixAAzpHe47vTvDUN/Mmbds5W+BSw0NaQ=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Countries\\spain.png"
     },
     {
-      "Identity": "D:\\Git\\Chat_Bot\\ChatBotApp\\wwwroot\\Countries\\sri_lanka.png",
+      "Identity": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\Countries\\sri_lanka.png",
       "SourceId": "FlintecChatBotApp",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\Chat_Bot\\ChatBotApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\",
       "BasePath": "/",
-      "RelativePath": "Countries/sri_lanka.png",
+      "RelativePath": "Countries/sri_lanka#[.{fingerprint}]?.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "zhk4rqlsex",
+      "Integrity": "OcyGCngQTduPRF7S/6x2T7V2Qk0AtZlWI6JlRzURmOM=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Countries\\sri_lanka.png"
     },
     {
-      "Identity": "D:\\Git\\Chat_Bot\\ChatBotApp\\wwwroot\\Countries\\sweden.png",
+      "Identity": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\Countries\\sweden.png",
       "SourceId": "FlintecChatBotApp",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\Chat_Bot\\ChatBotApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\",
       "BasePath": "/",
-      "RelativePath": "Countries/sweden.png",
+      "RelativePath": "Countries/sweden#[.{fingerprint}]?.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "iupf3ujw3h",
+      "Integrity": "ZoS7ASmNltaV6vWKY1W4u0kwALb3y7w0PHBjTXRFxJo=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Countries\\sweden.png"
     },
     {
-      "Identity": "D:\\Git\\Chat_Bot\\ChatBotApp\\wwwroot\\Countries\\uk.png",
+      "Identity": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\Countries\\uk.png",
       "SourceId": "FlintecChatBotApp",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\Chat_Bot\\ChatBotApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\",
       "BasePath": "/",
-      "RelativePath": "Countries/uk.png",
+      "RelativePath": "Countries/uk#[.{fingerprint}]?.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "d10o3l0654",
+      "Integrity": "zxIYFmaOIuWPMyRWLZfS/Q9PkCYz+GBUuedCFDJ+GAc=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Countries\\uk.png"
     },
     {
-      "Identity": "D:\\Git\\Chat_Bot\\ChatBotApp\\wwwroot\\Countries\\usa.png",
+      "Identity": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\Countries\\usa.png",
       "SourceId": "FlintecChatBotApp",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\Chat_Bot\\ChatBotApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\",
       "BasePath": "/",
-      "RelativePath": "Countries/usa.png",
+      "RelativePath": "Countries/usa#[.{fingerprint}]?.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "qj0sd1hwo7",
+      "Integrity": "xtKX1B/qcoJvGvaT5BL6WzBs9wVkC4ArUyjbev4cuy4=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Countries\\usa.png"
     },
     {
-      "Identity": "D:\\Git\\Chat_Bot\\ChatBotApp\\wwwroot\\Countries\\vietnam.png",
+      "Identity": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\Countries\\vietnam.png",
       "SourceId": "FlintecChatBotApp",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\Chat_Bot\\ChatBotApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\",
       "BasePath": "/",
-      "RelativePath": "Countries/vietnam.png",
+      "RelativePath": "Countries/vietnam#[.{fingerprint}]?.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "pgt3552dqx",
+      "Integrity": "F49Czfs+/knwWYvqAmglLqDbiwb01U69CtORSjZINUk=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Countries\\vietnam.png"
     },
     {
-      "Identity": "D:\\Git\\Chat_Bot\\ChatBotApp\\wwwroot\\css\\app.css",
+      "Identity": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\css\\app.css",
       "SourceId": "FlintecChatBotApp",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\Chat_Bot\\ChatBotApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\",
       "BasePath": "/",
-      "RelativePath": "css/app.css",
+      "RelativePath": "css/app#[.{fingerprint}]?.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "cgxyz0b3ua",
+      "Integrity": "JK9//e+ntCqcMdPM0/MbYZpNAdYpKBvTjJzxbcoXU10=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\app.css"
     },
     {
-      "Identity": "D:\\Git\\Chat_Bot\\ChatBotApp\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "Identity": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
       "SourceId": "FlintecChatBotApp",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\Chat_Bot\\ChatBotApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\",
       "BasePath": "/",
-      "RelativePath": "css/bootstrap/bootstrap.min.css",
+      "RelativePath": "css/bootstrap/bootstrap.min#[.{fingerprint}]?.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "6gzpyzhau4",
+      "Integrity": "SiIVMGgRhdXjKSTIddX7mh9IbOXVcwQWc7/p4nS6D/0=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Identity": "D:\\Git\\Chat_Bot\\ChatBotApp\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "Identity": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
       "SourceId": "FlintecChatBotApp",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\Chat_Bot\\ChatBotApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\",
       "BasePath": "/",
-      "RelativePath": "css/bootstrap/bootstrap.min.css.map",
+      "RelativePath": "css/bootstrap/bootstrap.min.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "8inm30yfxf",
+      "Integrity": "gBwg2tmA0Ci2u54gMF1jNCVku6vznarkLS6D76htNNQ=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Identity": "D:\\Git\\Chat_Bot\\ChatBotApp\\wwwroot\\favicon.png",
+      "Identity": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\favicon.png",
       "SourceId": "FlintecChatBotApp",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\Chat_Bot\\ChatBotApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\",
       "BasePath": "/",
-      "RelativePath": "favicon.png",
+      "RelativePath": "favicon#[.{fingerprint}]?.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "ifv42okdf2",
+      "Integrity": "4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.png"
     },
     {
-      "Identity": "D:\\Git\\Chat_Bot\\ChatBotApp\\wwwroot\\index.html",
+      "Identity": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\index.html",
       "SourceId": "FlintecChatBotApp",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\Chat_Bot\\ChatBotApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\",
       "BasePath": "/",
-      "RelativePath": "index.html",
+      "RelativePath": "index#[.{fingerprint}]?.html",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "8btwaau5mx",
+      "Integrity": "nNFYrnfoSPakmWO/m4NAivKj0Sj9991g9LT3esXU7Lk=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\index.html"
     },
     {
-      "Identity": "D:\\Git\\Chat_Bot\\ChatBotApp\\wwwroot\\WebIcons\\archive.png",
+      "Identity": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\WebIcons\\archive.png",
       "SourceId": "FlintecChatBotApp",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\Chat_Bot\\ChatBotApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\",
       "BasePath": "/",
-      "RelativePath": "WebIcons/archive.png",
+      "RelativePath": "WebIcons/archive#[.{fingerprint}]?.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "jrnqjurae2",
+      "Integrity": "MarrO/SCciOnipmFyag9e5Dc1Hoaoiy6jgu+iPHhm7Y=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\WebIcons\\archive.png"
     },
     {
-      "Identity": "D:\\Git\\Chat_Bot\\ChatBotApp\\wwwroot\\WebIcons\\copy.png",
+      "Identity": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\WebIcons\\copy.png",
       "SourceId": "FlintecChatBotApp",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\Chat_Bot\\ChatBotApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\",
       "BasePath": "/",
-      "RelativePath": "WebIcons/copy.png",
+      "RelativePath": "WebIcons/copy#[.{fingerprint}]?.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "wxbbqla42c",
+      "Integrity": "zIDcVF96Pj3WvMxQVZSZyKb1LxWeNGgwDbjounRsBMM=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\WebIcons\\copy.png"
     },
     {
-      "Identity": "D:\\Git\\Chat_Bot\\ChatBotApp\\wwwroot\\WebIcons\\delete.png",
+      "Identity": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\WebIcons\\delete.png",
       "SourceId": "FlintecChatBotApp",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\Chat_Bot\\ChatBotApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\",
       "BasePath": "/",
-      "RelativePath": "WebIcons/delete.png",
+      "RelativePath": "WebIcons/delete#[.{fingerprint}]?.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "gb0x6ra2og",
+      "Integrity": "3LGbMr6PKm1S7m4zLRo+Isfg4J2usTcmlHDOJRcN380=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\WebIcons\\delete.png"
     },
     {
-      "Identity": "D:\\Git\\Chat_Bot\\ChatBotApp\\wwwroot\\WebIcons\\edit.png",
+      "Identity": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\WebIcons\\edit.png",
       "SourceId": "FlintecChatBotApp",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\Chat_Bot\\ChatBotApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\",
       "BasePath": "/",
-      "RelativePath": "WebIcons/edit.png",
+      "RelativePath": "WebIcons/edit#[.{fingerprint}]?.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "h8qw14un3t",
+      "Integrity": "L+JhSgpF1DP1Rr6MqLQgQijUpFxv7bpADsxafASh4sc=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\WebIcons\\edit.png"
     },
     {
-      "Identity": "D:\\Git\\Chat_Bot\\ChatBotApp\\wwwroot\\WebIcons\\new.png",
+      "Identity": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\WebIcons\\flintec_logo.png",
       "SourceId": "FlintecChatBotApp",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\Chat_Bot\\ChatBotApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\",
       "BasePath": "/",
-      "RelativePath": "WebIcons/new.png",
+      "RelativePath": "WebIcons/flintec_logo#[.{fingerprint}]?.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "73cbr9lgoz",
+      "Integrity": "Dd8PNHvHPQuGEGILl61n3CbcgxFLDat/AyYmpS9qG6E=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\WebIcons\\flintec_logo.png"
+    },
+    {
+      "Identity": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\WebIcons\\new.png",
+      "SourceId": "FlintecChatBotApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "WebIcons/new#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "1tulzzlpjs",
+      "Integrity": "NY6oKGUAO5UMqh5WL/5lx32kYsCA1XX5BQDRbI1tBV8=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\WebIcons\\new.png"
     },
     {
-      "Identity": "D:\\Git\\Chat_Bot\\ChatBotApp\\wwwroot\\WebIcons\\reload.png",
+      "Identity": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\WebIcons\\reload.png",
       "SourceId": "FlintecChatBotApp",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\Chat_Bot\\ChatBotApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\",
       "BasePath": "/",
-      "RelativePath": "WebIcons/reload.png",
+      "RelativePath": "WebIcons/reload#[.{fingerprint}]?.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "44gtwntwp2",
+      "Integrity": "1KLrUkYrUP57TAQp1upBDvBXHS4Ig4VGVJXicxrhm2M=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\WebIcons\\reload.png"
     },
     {
-      "Identity": "D:\\Git\\Chat_Bot\\ChatBotApp\\wwwroot\\WebIcons\\RGU_logo.jpg",
+      "Identity": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\WebIcons\\RGU_logo.jpg",
       "SourceId": "FlintecChatBotApp",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\Chat_Bot\\ChatBotApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\",
       "BasePath": "/",
-      "RelativePath": "WebIcons/RGU_logo.jpg",
+      "RelativePath": "WebIcons/RGU_logo#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "w4yq3l5juj",
+      "Integrity": "UJZzh7LSrfZu6h0MTL90+u5WCJS6aLSjeffw35wJj3A=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\WebIcons\\RGU_logo.jpg"
     },
     {
-      "Identity": "D:\\Git\\Chat_Bot\\ChatBotApp\\wwwroot\\WebIcons\\share.png",
+      "Identity": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\WebIcons\\share.png",
       "SourceId": "FlintecChatBotApp",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\Chat_Bot\\ChatBotApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\",
       "BasePath": "/",
-      "RelativePath": "WebIcons/share.png",
+      "RelativePath": "WebIcons/share#[.{fingerprint}]?.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "i1jwp5ljsm",
+      "Integrity": "mtpzxNGtMorRH/cralCnXT73yVgtfOjZNxyhJmsDBAs=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\WebIcons\\share.png"
     },
     {
-      "Identity": "D:\\Git\\Chat_Bot\\ChatBotApp\\wwwroot\\WebIcons\\sidebar.png",
+      "Identity": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\WebIcons\\sidebar.png",
       "SourceId": "FlintecChatBotApp",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\Chat_Bot\\ChatBotApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\",
       "BasePath": "/",
-      "RelativePath": "WebIcons/sidebar.png",
+      "RelativePath": "WebIcons/sidebar#[.{fingerprint}]?.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "y74q3lprnm",
+      "Integrity": "IsGoD6C34UX2//Jt3Ee2rw/k6AdIoWarvGd3Z2wlZk0=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\WebIcons\\sidebar.png"
     },
     {
-      "Identity": "D:\\Git\\Chat_Bot\\ChatBotApp\\wwwroot\\WebIcons\\sidebar2.png",
+      "Identity": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\WebIcons\\sidebar2.png",
       "SourceId": "FlintecChatBotApp",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\Chat_Bot\\ChatBotApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\",
       "BasePath": "/",
-      "RelativePath": "WebIcons/sidebar2.png",
+      "RelativePath": "WebIcons/sidebar2#[.{fingerprint}]?.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "2riwta3aur",
+      "Integrity": "EoSRVtUGmJ+ZpS3ptZ68eWq1KpOdFQWQC4xqj7/K6bU=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\WebIcons\\sidebar2.png"
     },
     {
-      "Identity": "D:\\Git\\Chat_Bot\\ChatBotApp\\wwwroot\\WebIcons\\speaker.png",
+      "Identity": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\WebIcons\\speaker.png",
       "SourceId": "FlintecChatBotApp",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\Chat_Bot\\ChatBotApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\",
       "BasePath": "/",
-      "RelativePath": "WebIcons/speaker.png",
+      "RelativePath": "WebIcons/speaker#[.{fingerprint}]?.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "ykt8rrqntq",
+      "Integrity": "PhES3BZuAYDBhsBRlUXPVBWVfvEAvMPsO4ar3SrEIkc=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\WebIcons\\speaker.png"
     },
     {
-      "Identity": "D:\\Git\\Chat_Bot\\ChatBotApp\\wwwroot\\WebIcons\\stop.png",
+      "Identity": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\WebIcons\\stop.png",
       "SourceId": "FlintecChatBotApp",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\Chat_Bot\\ChatBotApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\",
       "BasePath": "/",
-      "RelativePath": "WebIcons/stop.png",
+      "RelativePath": "WebIcons/stop#[.{fingerprint}]?.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "b25rs3pxbo",
+      "Integrity": "Y6rK0/MMy+VPrRffgaXe3IvE9M+4aKpxXwZ42yAeWSI=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\WebIcons\\stop.png"
     },
     {
-      "Identity": "D:\\Git\\Chat_Bot\\ChatBotApp\\wwwroot\\WebIcons\\thumbsdown.png",
+      "Identity": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\WebIcons\\thumbsdown.png",
       "SourceId": "FlintecChatBotApp",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\Chat_Bot\\ChatBotApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\",
       "BasePath": "/",
-      "RelativePath": "WebIcons/thumbsdown.png",
+      "RelativePath": "WebIcons/thumbsdown#[.{fingerprint}]?.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "lv7qf9jmkn",
+      "Integrity": "n3KF+YJEjmmzzFChmoM2KpxAzdZ0YYVpcswf73/YO3w=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\WebIcons\\thumbsdown.png"
     },
     {
-      "Identity": "D:\\Git\\Chat_Bot\\ChatBotApp\\wwwroot\\WebIcons\\thumbsup.png",
+      "Identity": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\WebIcons\\thumbsup.png",
       "SourceId": "FlintecChatBotApp",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\Chat_Bot\\ChatBotApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\",
       "BasePath": "/",
-      "RelativePath": "WebIcons/thumbsup.png",
+      "RelativePath": "WebIcons/thumbsup#[.{fingerprint}]?.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "ex75fwxxcn",
+      "Integrity": "YvYXhevXE9AZHeaqugG98ZNHDRl8BRzB5ZzxxMGndPs=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\WebIcons\\thumbsup.png"
     },
     {
-      "Identity": "D:\\Git\\Chat_Bot\\ChatBotApp\\wwwroot\\WebIcons\\thumbsup2.png",
+      "Identity": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\WebIcons\\thumbsup2.png",
       "SourceId": "FlintecChatBotApp",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\Chat_Bot\\ChatBotApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\",
       "BasePath": "/",
-      "RelativePath": "WebIcons/thumbsup2.png",
+      "RelativePath": "WebIcons/thumbsup2#[.{fingerprint}]?.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "rqztixc39b",
+      "Integrity": "za9pIHGTMzW2WFcxH+5qIC8eJbom/QqWZBg3ysZU8P4=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\WebIcons\\thumbsup2.png"
     },
     {
-      "Identity": "D:\\Git\\Chat_Bot\\ChatBotApp\\wwwroot\\WebIcons\\up_arrow.png",
+      "Identity": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\WebIcons\\up_arrow.png",
       "SourceId": "FlintecChatBotApp",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\Chat_Bot\\ChatBotApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\",
       "BasePath": "/",
-      "RelativePath": "WebIcons/up_arrow.png",
+      "RelativePath": "WebIcons/up_arrow#[.{fingerprint}]?.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "dd6wd6v7ne",
+      "Integrity": "QZ2ZOPMa4EU0ktmDbgTGYcfUivMDlqpBe5IiTLb2q6k=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\WebIcons\\up_arrow.png"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "Countries/australia.3la2p1ttxm.png",
+      "AssetFile": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\Countries\\australia.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "62499"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Fw8oxQrMOqAZoi/owntibNhQNdwuIml1IHV0+rOITdU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 08 Mar 2025 10:55:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "3la2p1ttxm"
+        },
+        {
+          "Name": "label",
+          "Value": "Countries/australia.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Fw8oxQrMOqAZoi/owntibNhQNdwuIml1IHV0+rOITdU="
+        }
+      ]
+    },
+    {
+      "Route": "Countries/australia.png",
+      "AssetFile": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\Countries\\australia.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "62499"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Fw8oxQrMOqAZoi/owntibNhQNdwuIml1IHV0+rOITdU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 08 Mar 2025 10:55:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Fw8oxQrMOqAZoi/owntibNhQNdwuIml1IHV0+rOITdU="
+        }
+      ]
+    },
+    {
+      "Route": "Countries/austria.9bskfh6orb.png",
+      "AssetFile": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\Countries\\austria.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "15930"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"VX97HTi5ed8F8EaqNfULwue6RBjR05tkElQ1YLZUs0E=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 08 Mar 2025 10:55:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "9bskfh6orb"
+        },
+        {
+          "Name": "label",
+          "Value": "Countries/austria.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-VX97HTi5ed8F8EaqNfULwue6RBjR05tkElQ1YLZUs0E="
+        }
+      ]
+    },
+    {
+      "Route": "Countries/austria.png",
+      "AssetFile": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\Countries\\austria.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "15930"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"VX97HTi5ed8F8EaqNfULwue6RBjR05tkElQ1YLZUs0E=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 08 Mar 2025 10:55:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-VX97HTi5ed8F8EaqNfULwue6RBjR05tkElQ1YLZUs0E="
+        }
+      ]
+    },
+    {
+      "Route": "Countries/brazil.5q26qhvzk7.png",
+      "AssetFile": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\Countries\\brazil.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5475"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"TUFZIT6YMgsbd2ZCemolsc9Tx1WBNPL0SsjsniVhKlQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 08 Mar 2025 10:55:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "5q26qhvzk7"
+        },
+        {
+          "Name": "label",
+          "Value": "Countries/brazil.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-TUFZIT6YMgsbd2ZCemolsc9Tx1WBNPL0SsjsniVhKlQ="
+        }
+      ]
+    },
+    {
+      "Route": "Countries/brazil.png",
+      "AssetFile": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\Countries\\brazil.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5475"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"TUFZIT6YMgsbd2ZCemolsc9Tx1WBNPL0SsjsniVhKlQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 08 Mar 2025 10:55:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-TUFZIT6YMgsbd2ZCemolsc9Tx1WBNPL0SsjsniVhKlQ="
+        }
+      ]
+    },
+    {
+      "Route": "Countries/canada.l0tifk3kcb.png",
+      "AssetFile": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\Countries\\canada.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1822"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ZdLk6C9SdzxM8R1aUOMnYNRrC0Dyb0OXOLeypyiJbVs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 08 Mar 2025 10:55:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "l0tifk3kcb"
+        },
+        {
+          "Name": "label",
+          "Value": "Countries/canada.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-ZdLk6C9SdzxM8R1aUOMnYNRrC0Dyb0OXOLeypyiJbVs="
+        }
+      ]
+    },
+    {
+      "Route": "Countries/canada.png",
+      "AssetFile": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\Countries\\canada.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1822"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ZdLk6C9SdzxM8R1aUOMnYNRrC0Dyb0OXOLeypyiJbVs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 08 Mar 2025 10:55:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-ZdLk6C9SdzxM8R1aUOMnYNRrC0Dyb0OXOLeypyiJbVs="
+        }
+      ]
+    },
+    {
+      "Route": "Countries/colombia.24eo3d2nrh.png",
+      "AssetFile": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\Countries\\colombia.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "16354"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"cnQNEHbreZwWAsjVngsBTm4eX6wlxSLVJDmxLCBlcXU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 08 Mar 2025 10:55:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "24eo3d2nrh"
+        },
+        {
+          "Name": "label",
+          "Value": "Countries/colombia.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-cnQNEHbreZwWAsjVngsBTm4eX6wlxSLVJDmxLCBlcXU="
+        }
+      ]
+    },
+    {
+      "Route": "Countries/colombia.png",
+      "AssetFile": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\Countries\\colombia.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "16354"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"cnQNEHbreZwWAsjVngsBTm4eX6wlxSLVJDmxLCBlcXU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 08 Mar 2025 10:55:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-cnQNEHbreZwWAsjVngsBTm4eX6wlxSLVJDmxLCBlcXU="
+        }
+      ]
+    },
+    {
+      "Route": "Countries/france.png",
+      "AssetFile": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\Countries\\france.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5192"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"7l9B+fRqHZ9ZOFVQuMLdOS4/zDxLWdKBcDT0b6OTrkA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 08 Mar 2025 10:55:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-7l9B+fRqHZ9ZOFVQuMLdOS4/zDxLWdKBcDT0b6OTrkA="
+        }
+      ]
+    },
+    {
+      "Route": "Countries/france.q524oxk4ul.png",
+      "AssetFile": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\Countries\\france.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5192"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"7l9B+fRqHZ9ZOFVQuMLdOS4/zDxLWdKBcDT0b6OTrkA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 08 Mar 2025 10:55:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "q524oxk4ul"
+        },
+        {
+          "Name": "label",
+          "Value": "Countries/france.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-7l9B+fRqHZ9ZOFVQuMLdOS4/zDxLWdKBcDT0b6OTrkA="
+        }
+      ]
+    },
+    {
+      "Route": "Countries/germany.png",
+      "AssetFile": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\Countries\\germany.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2659"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"v/yUhkdztH5ZTVM+LMTeSNFU9ztBKQcRt1LlE+uGbZE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 08 Mar 2025 10:55:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-v/yUhkdztH5ZTVM+LMTeSNFU9ztBKQcRt1LlE+uGbZE="
+        }
+      ]
+    },
+    {
+      "Route": "Countries/germany.vow9fwwwnu.png",
+      "AssetFile": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\Countries\\germany.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2659"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"v/yUhkdztH5ZTVM+LMTeSNFU9ztBKQcRt1LlE+uGbZE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 08 Mar 2025 10:55:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "vow9fwwwnu"
+        },
+        {
+          "Name": "label",
+          "Value": "Countries/germany.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-v/yUhkdztH5ZTVM+LMTeSNFU9ztBKQcRt1LlE+uGbZE="
+        }
+      ]
+    },
+    {
+      "Route": "Countries/india.d00wwzdf13.png",
+      "AssetFile": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\Countries\\india.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "18036"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"DeQFI99TaBpezUkGCxYvAbwZQJNGSULoAx9aj6Pok0M=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 08 Mar 2025 10:55:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "d00wwzdf13"
+        },
+        {
+          "Name": "label",
+          "Value": "Countries/india.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-DeQFI99TaBpezUkGCxYvAbwZQJNGSULoAx9aj6Pok0M="
+        }
+      ]
+    },
+    {
+      "Route": "Countries/india.png",
+      "AssetFile": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\Countries\\india.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "18036"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"DeQFI99TaBpezUkGCxYvAbwZQJNGSULoAx9aj6Pok0M=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 08 Mar 2025 10:55:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-DeQFI99TaBpezUkGCxYvAbwZQJNGSULoAx9aj6Pok0M="
+        }
+      ]
+    },
+    {
+      "Route": "Countries/italy.2y4rtp2vdh.png",
+      "AssetFile": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\Countries\\italy.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "233"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ynIdZAv9eFAy9jtZHnVlh8JYW+2q7OAEs24o9JYTXFE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 08 Mar 2025 10:55:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "2y4rtp2vdh"
+        },
+        {
+          "Name": "label",
+          "Value": "Countries/italy.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-ynIdZAv9eFAy9jtZHnVlh8JYW+2q7OAEs24o9JYTXFE="
+        }
+      ]
+    },
+    {
+      "Route": "Countries/italy.png",
+      "AssetFile": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\Countries\\italy.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "233"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ynIdZAv9eFAy9jtZHnVlh8JYW+2q7OAEs24o9JYTXFE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 08 Mar 2025 10:55:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-ynIdZAv9eFAy9jtZHnVlh8JYW+2q7OAEs24o9JYTXFE="
+        }
+      ]
+    },
+    {
+      "Route": "Countries/mexico.mjtn2oxbho.png",
+      "AssetFile": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\Countries\\mexico.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "30593"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"rpgtA1wtRRzxm0oGVYQTFUYPpOmdz5kKHpgCSfFMLT8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 08 Mar 2025 10:55:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "mjtn2oxbho"
+        },
+        {
+          "Name": "label",
+          "Value": "Countries/mexico.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-rpgtA1wtRRzxm0oGVYQTFUYPpOmdz5kKHpgCSfFMLT8="
+        }
+      ]
+    },
+    {
+      "Route": "Countries/mexico.png",
+      "AssetFile": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\Countries\\mexico.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "30593"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"rpgtA1wtRRzxm0oGVYQTFUYPpOmdz5kKHpgCSfFMLT8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 08 Mar 2025 10:55:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-rpgtA1wtRRzxm0oGVYQTFUYPpOmdz5kKHpgCSfFMLT8="
+        }
+      ]
+    },
+    {
+      "Route": "Countries/netherlands.png",
+      "AssetFile": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\Countries\\netherlands.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4967"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"mJzedWqgMetkdXQ80k2lpU83YtoQJfKAlTgEpyUe7Sg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 08 Mar 2025 10:55:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-mJzedWqgMetkdXQ80k2lpU83YtoQJfKAlTgEpyUe7Sg="
+        }
+      ]
+    },
+    {
+      "Route": "Countries/netherlands.sb3bfuhgra.png",
+      "AssetFile": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\Countries\\netherlands.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4967"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"mJzedWqgMetkdXQ80k2lpU83YtoQJfKAlTgEpyUe7Sg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 08 Mar 2025 10:55:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "sb3bfuhgra"
+        },
+        {
+          "Name": "label",
+          "Value": "Countries/netherlands.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-mJzedWqgMetkdXQ80k2lpU83YtoQJfKAlTgEpyUe7Sg="
+        }
+      ]
+    },
+    {
+      "Route": "Countries/new_zealand.png",
+      "AssetFile": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\Countries\\new_zealand.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "34042"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"xe9SGbqOBmTOIti5CAlWiffXqssoGzfJmnSrJj2e9yY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 08 Mar 2025 10:55:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-xe9SGbqOBmTOIti5CAlWiffXqssoGzfJmnSrJj2e9yY="
+        }
+      ]
+    },
+    {
+      "Route": "Countries/new_zealand.rwmdnt5og4.png",
+      "AssetFile": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\Countries\\new_zealand.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "34042"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"xe9SGbqOBmTOIti5CAlWiffXqssoGzfJmnSrJj2e9yY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 08 Mar 2025 10:55:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "rwmdnt5og4"
+        },
+        {
+          "Name": "label",
+          "Value": "Countries/new_zealand.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-xe9SGbqOBmTOIti5CAlWiffXqssoGzfJmnSrJj2e9yY="
+        }
+      ]
+    },
+    {
+      "Route": "Countries/singapore.png",
+      "AssetFile": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\Countries\\singapore.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "12165"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"baxkl+P51mjR3+IhDZpzKKhxxo6CbGgNSIvFzXRSnT0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 08 Mar 2025 10:55:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-baxkl+P51mjR3+IhDZpzKKhxxo6CbGgNSIvFzXRSnT0="
+        }
+      ]
+    },
+    {
+      "Route": "Countries/singapore.zoljvkhkp2.png",
+      "AssetFile": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\Countries\\singapore.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "12165"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"baxkl+P51mjR3+IhDZpzKKhxxo6CbGgNSIvFzXRSnT0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 08 Mar 2025 10:55:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "zoljvkhkp2"
+        },
+        {
+          "Name": "label",
+          "Value": "Countries/singapore.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-baxkl+P51mjR3+IhDZpzKKhxxo6CbGgNSIvFzXRSnT0="
+        }
+      ]
+    },
+    {
+      "Route": "Countries/south_korea.fyh51nh0rn.png",
+      "AssetFile": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\Countries\\south_korea.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "30317"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"2ajWK1P9nULYdiQWgOSg7q8Bt2ObnBEW5RNlgjb/KQk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 08 Mar 2025 10:55:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "fyh51nh0rn"
+        },
+        {
+          "Name": "label",
+          "Value": "Countries/south_korea.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-2ajWK1P9nULYdiQWgOSg7q8Bt2ObnBEW5RNlgjb/KQk="
+        }
+      ]
+    },
+    {
+      "Route": "Countries/south_korea.png",
+      "AssetFile": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\Countries\\south_korea.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "30317"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"2ajWK1P9nULYdiQWgOSg7q8Bt2ObnBEW5RNlgjb/KQk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 08 Mar 2025 10:55:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-2ajWK1P9nULYdiQWgOSg7q8Bt2ObnBEW5RNlgjb/KQk="
+        }
+      ]
+    },
+    {
+      "Route": "Countries/spain.7hai46itp3.png",
+      "AssetFile": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\Countries\\spain.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "25965"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"i8FEelwru9NixAAzpHe47vTvDUN/Mmbds5W+BSw0NaQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 08 Mar 2025 10:55:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "7hai46itp3"
+        },
+        {
+          "Name": "label",
+          "Value": "Countries/spain.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-i8FEelwru9NixAAzpHe47vTvDUN/Mmbds5W+BSw0NaQ="
+        }
+      ]
+    },
+    {
+      "Route": "Countries/spain.png",
+      "AssetFile": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\Countries\\spain.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "25965"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"i8FEelwru9NixAAzpHe47vTvDUN/Mmbds5W+BSw0NaQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 08 Mar 2025 10:55:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-i8FEelwru9NixAAzpHe47vTvDUN/Mmbds5W+BSw0NaQ="
+        }
+      ]
+    },
+    {
+      "Route": "Countries/sri_lanka.png",
+      "AssetFile": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\Countries\\sri_lanka.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "37945"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"OcyGCngQTduPRF7S/6x2T7V2Qk0AtZlWI6JlRzURmOM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 08 Mar 2025 10:55:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-OcyGCngQTduPRF7S/6x2T7V2Qk0AtZlWI6JlRzURmOM="
+        }
+      ]
+    },
+    {
+      "Route": "Countries/sri_lanka.zhk4rqlsex.png",
+      "AssetFile": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\Countries\\sri_lanka.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "37945"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"OcyGCngQTduPRF7S/6x2T7V2Qk0AtZlWI6JlRzURmOM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 08 Mar 2025 10:55:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "zhk4rqlsex"
+        },
+        {
+          "Name": "label",
+          "Value": "Countries/sri_lanka.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-OcyGCngQTduPRF7S/6x2T7V2Qk0AtZlWI6JlRzURmOM="
+        }
+      ]
+    },
+    {
+      "Route": "Countries/sweden.iupf3ujw3h.png",
+      "AssetFile": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\Countries\\sweden.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "21552"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ZoS7ASmNltaV6vWKY1W4u0kwALb3y7w0PHBjTXRFxJo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 08 Mar 2025 10:55:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "iupf3ujw3h"
+        },
+        {
+          "Name": "label",
+          "Value": "Countries/sweden.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-ZoS7ASmNltaV6vWKY1W4u0kwALb3y7w0PHBjTXRFxJo="
+        }
+      ]
+    },
+    {
+      "Route": "Countries/sweden.png",
+      "AssetFile": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\Countries\\sweden.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "21552"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ZoS7ASmNltaV6vWKY1W4u0kwALb3y7w0PHBjTXRFxJo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 08 Mar 2025 10:55:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-ZoS7ASmNltaV6vWKY1W4u0kwALb3y7w0PHBjTXRFxJo="
+        }
+      ]
+    },
+    {
+      "Route": "Countries/uk.d10o3l0654.png",
+      "AssetFile": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\Countries\\uk.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "36010"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"zxIYFmaOIuWPMyRWLZfS/Q9PkCYz+GBUuedCFDJ+GAc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 08 Mar 2025 10:55:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "d10o3l0654"
+        },
+        {
+          "Name": "label",
+          "Value": "Countries/uk.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-zxIYFmaOIuWPMyRWLZfS/Q9PkCYz+GBUuedCFDJ+GAc="
+        }
+      ]
+    },
+    {
+      "Route": "Countries/uk.png",
+      "AssetFile": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\Countries\\uk.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "36010"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"zxIYFmaOIuWPMyRWLZfS/Q9PkCYz+GBUuedCFDJ+GAc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 08 Mar 2025 10:55:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-zxIYFmaOIuWPMyRWLZfS/Q9PkCYz+GBUuedCFDJ+GAc="
+        }
+      ]
+    },
+    {
+      "Route": "Countries/usa.png",
+      "AssetFile": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\Countries\\usa.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "38898"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"xtKX1B/qcoJvGvaT5BL6WzBs9wVkC4ArUyjbev4cuy4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 08 Mar 2025 10:55:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-xtKX1B/qcoJvGvaT5BL6WzBs9wVkC4ArUyjbev4cuy4="
+        }
+      ]
+    },
+    {
+      "Route": "Countries/usa.qj0sd1hwo7.png",
+      "AssetFile": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\Countries\\usa.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "38898"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"xtKX1B/qcoJvGvaT5BL6WzBs9wVkC4ArUyjbev4cuy4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 08 Mar 2025 10:55:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "qj0sd1hwo7"
+        },
+        {
+          "Name": "label",
+          "Value": "Countries/usa.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-xtKX1B/qcoJvGvaT5BL6WzBs9wVkC4ArUyjbev4cuy4="
+        }
+      ]
+    },
+    {
+      "Route": "Countries/vietnam.pgt3552dqx.png",
+      "AssetFile": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\Countries\\vietnam.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "7324"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"F49Czfs+/knwWYvqAmglLqDbiwb01U69CtORSjZINUk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 08 Mar 2025 10:55:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "pgt3552dqx"
+        },
+        {
+          "Name": "label",
+          "Value": "Countries/vietnam.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-F49Czfs+/knwWYvqAmglLqDbiwb01U69CtORSjZINUk="
+        }
+      ]
+    },
+    {
+      "Route": "Countries/vietnam.png",
+      "AssetFile": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\Countries\\vietnam.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "7324"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"F49Czfs+/knwWYvqAmglLqDbiwb01U69CtORSjZINUk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 08 Mar 2025 10:55:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-F49Czfs+/knwWYvqAmglLqDbiwb01U69CtORSjZINUk="
+        }
+      ]
+    },
+    {
+      "Route": "css/app.cgxyz0b3ua.css",
+      "AssetFile": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\css\\app.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6488"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"JK9//e+ntCqcMdPM0/MbYZpNAdYpKBvTjJzxbcoXU10=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 08 Mar 2025 10:55:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "cgxyz0b3ua"
+        },
+        {
+          "Name": "label",
+          "Value": "css/app.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-JK9//e+ntCqcMdPM0/MbYZpNAdYpKBvTjJzxbcoXU10="
+        }
+      ]
+    },
+    {
+      "Route": "css/app.css",
+      "AssetFile": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\css\\app.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6488"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"JK9//e+ntCqcMdPM0/MbYZpNAdYpKBvTjJzxbcoXU10=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 08 Mar 2025 10:55:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-JK9//e+ntCqcMdPM0/MbYZpNAdYpKBvTjJzxbcoXU10="
+        }
+      ]
+    },
+    {
+      "Route": "css/bootstrap/bootstrap.min.6gzpyzhau4.css",
+      "AssetFile": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "162726"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"SiIVMGgRhdXjKSTIddX7mh9IbOXVcwQWc7/p4nS6D/0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 08 Mar 2025 10:55:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "6gzpyzhau4"
+        },
+        {
+          "Name": "label",
+          "Value": "css/bootstrap/bootstrap.min.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-SiIVMGgRhdXjKSTIddX7mh9IbOXVcwQWc7/p4nS6D/0="
+        }
+      ]
+    },
+    {
+      "Route": "css/bootstrap/bootstrap.min.css",
+      "AssetFile": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "162726"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"SiIVMGgRhdXjKSTIddX7mh9IbOXVcwQWc7/p4nS6D/0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 08 Mar 2025 10:55:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-SiIVMGgRhdXjKSTIddX7mh9IbOXVcwQWc7/p4nS6D/0="
+        }
+      ]
+    },
+    {
+      "Route": "css/bootstrap/bootstrap.min.css.8inm30yfxf.map",
+      "AssetFile": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "449111"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"gBwg2tmA0Ci2u54gMF1jNCVku6vznarkLS6D76htNNQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 08 Mar 2025 10:55:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "8inm30yfxf"
+        },
+        {
+          "Name": "label",
+          "Value": "css/bootstrap/bootstrap.min.css.map"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-gBwg2tmA0Ci2u54gMF1jNCVku6vznarkLS6D76htNNQ="
+        }
+      ]
+    },
+    {
+      "Route": "css/bootstrap/bootstrap.min.css.map",
+      "AssetFile": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "449111"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"gBwg2tmA0Ci2u54gMF1jNCVku6vznarkLS6D76htNNQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 08 Mar 2025 10:55:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-gBwg2tmA0Ci2u54gMF1jNCVku6vznarkLS6D76htNNQ="
+        }
+      ]
+    },
+    {
+      "Route": "favicon.ifv42okdf2.png",
+      "AssetFile": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\favicon.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1148"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 08 Mar 2025 10:55:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ifv42okdf2"
+        },
+        {
+          "Name": "label",
+          "Value": "favicon.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg="
+        }
+      ]
+    },
+    {
+      "Route": "favicon.png",
+      "AssetFile": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\favicon.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1148"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 08 Mar 2025 10:55:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg="
+        }
+      ]
+    },
+    {
+      "Route": "FlintecChatBotApp.6wmcqrpyln.bundle.scp.css",
+      "AssetFile": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\obj\\Debug\\net8.0-android\\scopedcss\\projectbundle\\FlintecChatBotApp.bundle.scp.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "9199"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"5rRg6S3xT+s7QkuYxKAlCl0NpqCwlvVM0M8/BbXXFkQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 26 Apr 2025 08:22:44 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "6wmcqrpyln"
+        },
+        {
+          "Name": "label",
+          "Value": "FlintecChatBotApp.bundle.scp.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-5rRg6S3xT+s7QkuYxKAlCl0NpqCwlvVM0M8/BbXXFkQ="
+        }
+      ]
+    },
+    {
+      "Route": "FlintecChatBotApp.6wmcqrpyln.styles.css",
+      "AssetFile": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\obj\\Debug\\net8.0-android\\scopedcss\\bundle\\FlintecChatBotApp.styles.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "9199"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"5rRg6S3xT+s7QkuYxKAlCl0NpqCwlvVM0M8/BbXXFkQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 26 Apr 2025 08:22:44 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "6wmcqrpyln"
+        },
+        {
+          "Name": "label",
+          "Value": "FlintecChatBotApp.styles.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-5rRg6S3xT+s7QkuYxKAlCl0NpqCwlvVM0M8/BbXXFkQ="
+        }
+      ]
+    },
+    {
+      "Route": "FlintecChatBotApp.bundle.scp.css",
+      "AssetFile": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\obj\\Debug\\net8.0-android\\scopedcss\\projectbundle\\FlintecChatBotApp.bundle.scp.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "9199"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"5rRg6S3xT+s7QkuYxKAlCl0NpqCwlvVM0M8/BbXXFkQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 26 Apr 2025 08:22:44 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-5rRg6S3xT+s7QkuYxKAlCl0NpqCwlvVM0M8/BbXXFkQ="
+        }
+      ]
+    },
+    {
+      "Route": "FlintecChatBotApp.styles.css",
+      "AssetFile": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\obj\\Debug\\net8.0-android\\scopedcss\\bundle\\FlintecChatBotApp.styles.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "9199"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"5rRg6S3xT+s7QkuYxKAlCl0NpqCwlvVM0M8/BbXXFkQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 26 Apr 2025 08:22:44 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-5rRg6S3xT+s7QkuYxKAlCl0NpqCwlvVM0M8/BbXXFkQ="
+        }
+      ]
+    },
+    {
+      "Route": "index.8btwaau5mx.html",
+      "AssetFile": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\index.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "971"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"nNFYrnfoSPakmWO/m4NAivKj0Sj9991g9LT3esXU7Lk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 08 Mar 2025 10:55:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "8btwaau5mx"
+        },
+        {
+          "Name": "label",
+          "Value": "index.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-nNFYrnfoSPakmWO/m4NAivKj0Sj9991g9LT3esXU7Lk="
+        }
+      ]
+    },
+    {
+      "Route": "index.html",
+      "AssetFile": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\index.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "971"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"nNFYrnfoSPakmWO/m4NAivKj0Sj9991g9LT3esXU7Lk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 08 Mar 2025 10:55:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-nNFYrnfoSPakmWO/m4NAivKj0Sj9991g9LT3esXU7Lk="
+        }
+      ]
+    },
+    {
+      "Route": "WebIcons/archive.jrnqjurae2.png",
+      "AssetFile": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\WebIcons\\archive.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2482"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"MarrO/SCciOnipmFyag9e5Dc1Hoaoiy6jgu+iPHhm7Y=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 08 Mar 2025 10:55:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "jrnqjurae2"
+        },
+        {
+          "Name": "label",
+          "Value": "WebIcons/archive.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-MarrO/SCciOnipmFyag9e5Dc1Hoaoiy6jgu+iPHhm7Y="
+        }
+      ]
+    },
+    {
+      "Route": "WebIcons/archive.png",
+      "AssetFile": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\WebIcons\\archive.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2482"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"MarrO/SCciOnipmFyag9e5Dc1Hoaoiy6jgu+iPHhm7Y=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 08 Mar 2025 10:55:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-MarrO/SCciOnipmFyag9e5Dc1Hoaoiy6jgu+iPHhm7Y="
+        }
+      ]
+    },
+    {
+      "Route": "WebIcons/copy.png",
+      "AssetFile": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\WebIcons\\copy.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1008"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"zIDcVF96Pj3WvMxQVZSZyKb1LxWeNGgwDbjounRsBMM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 08 Mar 2025 10:55:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-zIDcVF96Pj3WvMxQVZSZyKb1LxWeNGgwDbjounRsBMM="
+        }
+      ]
+    },
+    {
+      "Route": "WebIcons/copy.wxbbqla42c.png",
+      "AssetFile": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\WebIcons\\copy.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1008"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"zIDcVF96Pj3WvMxQVZSZyKb1LxWeNGgwDbjounRsBMM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 08 Mar 2025 10:55:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "wxbbqla42c"
+        },
+        {
+          "Name": "label",
+          "Value": "WebIcons/copy.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-zIDcVF96Pj3WvMxQVZSZyKb1LxWeNGgwDbjounRsBMM="
+        }
+      ]
+    },
+    {
+      "Route": "WebIcons/delete.gb0x6ra2og.png",
+      "AssetFile": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\WebIcons\\delete.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8994"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"3LGbMr6PKm1S7m4zLRo+Isfg4J2usTcmlHDOJRcN380=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 08 Mar 2025 10:55:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "gb0x6ra2og"
+        },
+        {
+          "Name": "label",
+          "Value": "WebIcons/delete.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-3LGbMr6PKm1S7m4zLRo+Isfg4J2usTcmlHDOJRcN380="
+        }
+      ]
+    },
+    {
+      "Route": "WebIcons/delete.png",
+      "AssetFile": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\WebIcons\\delete.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8994"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"3LGbMr6PKm1S7m4zLRo+Isfg4J2usTcmlHDOJRcN380=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 08 Mar 2025 10:55:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-3LGbMr6PKm1S7m4zLRo+Isfg4J2usTcmlHDOJRcN380="
+        }
+      ]
+    },
+    {
+      "Route": "WebIcons/edit.h8qw14un3t.png",
+      "AssetFile": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\WebIcons\\edit.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1492"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"L+JhSgpF1DP1Rr6MqLQgQijUpFxv7bpADsxafASh4sc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 08 Mar 2025 10:55:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "h8qw14un3t"
+        },
+        {
+          "Name": "label",
+          "Value": "WebIcons/edit.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-L+JhSgpF1DP1Rr6MqLQgQijUpFxv7bpADsxafASh4sc="
+        }
+      ]
+    },
+    {
+      "Route": "WebIcons/edit.png",
+      "AssetFile": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\WebIcons\\edit.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1492"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"L+JhSgpF1DP1Rr6MqLQgQijUpFxv7bpADsxafASh4sc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 08 Mar 2025 10:55:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-L+JhSgpF1DP1Rr6MqLQgQijUpFxv7bpADsxafASh4sc="
+        }
+      ]
+    },
+    {
+      "Route": "WebIcons/flintec_logo.73cbr9lgoz.png",
+      "AssetFile": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\WebIcons\\flintec_logo.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "17817"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Dd8PNHvHPQuGEGILl61n3CbcgxFLDat/AyYmpS9qG6E=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 26 Apr 2025 08:22:41 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "73cbr9lgoz"
+        },
+        {
+          "Name": "label",
+          "Value": "WebIcons/flintec_logo.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Dd8PNHvHPQuGEGILl61n3CbcgxFLDat/AyYmpS9qG6E="
+        }
+      ]
+    },
+    {
+      "Route": "WebIcons/flintec_logo.png",
+      "AssetFile": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\WebIcons\\flintec_logo.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "17817"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Dd8PNHvHPQuGEGILl61n3CbcgxFLDat/AyYmpS9qG6E=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 26 Apr 2025 08:22:41 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Dd8PNHvHPQuGEGILl61n3CbcgxFLDat/AyYmpS9qG6E="
+        }
+      ]
+    },
+    {
+      "Route": "WebIcons/new.1tulzzlpjs.png",
+      "AssetFile": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\WebIcons\\new.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3336"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"NY6oKGUAO5UMqh5WL/5lx32kYsCA1XX5BQDRbI1tBV8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 08 Mar 2025 10:55:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "1tulzzlpjs"
+        },
+        {
+          "Name": "label",
+          "Value": "WebIcons/new.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-NY6oKGUAO5UMqh5WL/5lx32kYsCA1XX5BQDRbI1tBV8="
+        }
+      ]
+    },
+    {
+      "Route": "WebIcons/new.png",
+      "AssetFile": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\WebIcons\\new.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3336"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"NY6oKGUAO5UMqh5WL/5lx32kYsCA1XX5BQDRbI1tBV8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 08 Mar 2025 10:55:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-NY6oKGUAO5UMqh5WL/5lx32kYsCA1XX5BQDRbI1tBV8="
+        }
+      ]
+    },
+    {
+      "Route": "WebIcons/reload.44gtwntwp2.png",
+      "AssetFile": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\WebIcons\\reload.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "42024"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"1KLrUkYrUP57TAQp1upBDvBXHS4Ig4VGVJXicxrhm2M=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 08 Mar 2025 10:55:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "44gtwntwp2"
+        },
+        {
+          "Name": "label",
+          "Value": "WebIcons/reload.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-1KLrUkYrUP57TAQp1upBDvBXHS4Ig4VGVJXicxrhm2M="
+        }
+      ]
+    },
+    {
+      "Route": "WebIcons/reload.png",
+      "AssetFile": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\WebIcons\\reload.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "42024"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"1KLrUkYrUP57TAQp1upBDvBXHS4Ig4VGVJXicxrhm2M=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 08 Mar 2025 10:55:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-1KLrUkYrUP57TAQp1upBDvBXHS4Ig4VGVJXicxrhm2M="
+        }
+      ]
+    },
+    {
+      "Route": "WebIcons/RGU_logo.jpg",
+      "AssetFile": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\WebIcons\\RGU_logo.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "40886"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"UJZzh7LSrfZu6h0MTL90+u5WCJS6aLSjeffw35wJj3A=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 08 Mar 2025 10:55:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-UJZzh7LSrfZu6h0MTL90+u5WCJS6aLSjeffw35wJj3A="
+        }
+      ]
+    },
+    {
+      "Route": "WebIcons/RGU_logo.w4yq3l5juj.jpg",
+      "AssetFile": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\WebIcons\\RGU_logo.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "40886"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"UJZzh7LSrfZu6h0MTL90+u5WCJS6aLSjeffw35wJj3A=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 08 Mar 2025 10:55:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "w4yq3l5juj"
+        },
+        {
+          "Name": "label",
+          "Value": "WebIcons/RGU_logo.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-UJZzh7LSrfZu6h0MTL90+u5WCJS6aLSjeffw35wJj3A="
+        }
+      ]
+    },
+    {
+      "Route": "WebIcons/share.i1jwp5ljsm.png",
+      "AssetFile": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\WebIcons\\share.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "16481"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"mtpzxNGtMorRH/cralCnXT73yVgtfOjZNxyhJmsDBAs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 08 Mar 2025 10:55:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "i1jwp5ljsm"
+        },
+        {
+          "Name": "label",
+          "Value": "WebIcons/share.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-mtpzxNGtMorRH/cralCnXT73yVgtfOjZNxyhJmsDBAs="
+        }
+      ]
+    },
+    {
+      "Route": "WebIcons/share.png",
+      "AssetFile": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\WebIcons\\share.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "16481"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"mtpzxNGtMorRH/cralCnXT73yVgtfOjZNxyhJmsDBAs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 08 Mar 2025 10:55:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-mtpzxNGtMorRH/cralCnXT73yVgtfOjZNxyhJmsDBAs="
+        }
+      ]
+    },
+    {
+      "Route": "WebIcons/sidebar.png",
+      "AssetFile": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\WebIcons\\sidebar.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2873"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"IsGoD6C34UX2//Jt3Ee2rw/k6AdIoWarvGd3Z2wlZk0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 08 Mar 2025 10:55:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-IsGoD6C34UX2//Jt3Ee2rw/k6AdIoWarvGd3Z2wlZk0="
+        }
+      ]
+    },
+    {
+      "Route": "WebIcons/sidebar.y74q3lprnm.png",
+      "AssetFile": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\WebIcons\\sidebar.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2873"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"IsGoD6C34UX2//Jt3Ee2rw/k6AdIoWarvGd3Z2wlZk0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 08 Mar 2025 10:55:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "y74q3lprnm"
+        },
+        {
+          "Name": "label",
+          "Value": "WebIcons/sidebar.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-IsGoD6C34UX2//Jt3Ee2rw/k6AdIoWarvGd3Z2wlZk0="
+        }
+      ]
+    },
+    {
+      "Route": "WebIcons/sidebar2.2riwta3aur.png",
+      "AssetFile": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\WebIcons\\sidebar2.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6158"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"EoSRVtUGmJ+ZpS3ptZ68eWq1KpOdFQWQC4xqj7/K6bU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 08 Mar 2025 10:55:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "2riwta3aur"
+        },
+        {
+          "Name": "label",
+          "Value": "WebIcons/sidebar2.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-EoSRVtUGmJ+ZpS3ptZ68eWq1KpOdFQWQC4xqj7/K6bU="
+        }
+      ]
+    },
+    {
+      "Route": "WebIcons/sidebar2.png",
+      "AssetFile": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\WebIcons\\sidebar2.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6158"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"EoSRVtUGmJ+ZpS3ptZ68eWq1KpOdFQWQC4xqj7/K6bU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 08 Mar 2025 10:55:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-EoSRVtUGmJ+ZpS3ptZ68eWq1KpOdFQWQC4xqj7/K6bU="
+        }
+      ]
+    },
+    {
+      "Route": "WebIcons/speaker.png",
+      "AssetFile": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\WebIcons\\speaker.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "10358"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"PhES3BZuAYDBhsBRlUXPVBWVfvEAvMPsO4ar3SrEIkc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 08 Mar 2025 10:55:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-PhES3BZuAYDBhsBRlUXPVBWVfvEAvMPsO4ar3SrEIkc="
+        }
+      ]
+    },
+    {
+      "Route": "WebIcons/speaker.ykt8rrqntq.png",
+      "AssetFile": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\WebIcons\\speaker.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "10358"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"PhES3BZuAYDBhsBRlUXPVBWVfvEAvMPsO4ar3SrEIkc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 08 Mar 2025 10:55:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ykt8rrqntq"
+        },
+        {
+          "Name": "label",
+          "Value": "WebIcons/speaker.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-PhES3BZuAYDBhsBRlUXPVBWVfvEAvMPsO4ar3SrEIkc="
+        }
+      ]
+    },
+    {
+      "Route": "WebIcons/stop.b25rs3pxbo.png",
+      "AssetFile": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\WebIcons\\stop.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "7522"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Y6rK0/MMy+VPrRffgaXe3IvE9M+4aKpxXwZ42yAeWSI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 08 Mar 2025 10:55:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "b25rs3pxbo"
+        },
+        {
+          "Name": "label",
+          "Value": "WebIcons/stop.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Y6rK0/MMy+VPrRffgaXe3IvE9M+4aKpxXwZ42yAeWSI="
+        }
+      ]
+    },
+    {
+      "Route": "WebIcons/stop.png",
+      "AssetFile": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\WebIcons\\stop.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "7522"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Y6rK0/MMy+VPrRffgaXe3IvE9M+4aKpxXwZ42yAeWSI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 08 Mar 2025 10:55:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Y6rK0/MMy+VPrRffgaXe3IvE9M+4aKpxXwZ42yAeWSI="
+        }
+      ]
+    },
+    {
+      "Route": "WebIcons/thumbsdown.lv7qf9jmkn.png",
+      "AssetFile": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\WebIcons\\thumbsdown.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4916"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"n3KF+YJEjmmzzFChmoM2KpxAzdZ0YYVpcswf73/YO3w=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 08 Mar 2025 10:55:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "lv7qf9jmkn"
+        },
+        {
+          "Name": "label",
+          "Value": "WebIcons/thumbsdown.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-n3KF+YJEjmmzzFChmoM2KpxAzdZ0YYVpcswf73/YO3w="
+        }
+      ]
+    },
+    {
+      "Route": "WebIcons/thumbsdown.png",
+      "AssetFile": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\WebIcons\\thumbsdown.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4916"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"n3KF+YJEjmmzzFChmoM2KpxAzdZ0YYVpcswf73/YO3w=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 08 Mar 2025 10:55:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-n3KF+YJEjmmzzFChmoM2KpxAzdZ0YYVpcswf73/YO3w="
+        }
+      ]
+    },
+    {
+      "Route": "WebIcons/thumbsup.ex75fwxxcn.png",
+      "AssetFile": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\WebIcons\\thumbsup.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5920"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"YvYXhevXE9AZHeaqugG98ZNHDRl8BRzB5ZzxxMGndPs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 08 Mar 2025 10:55:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ex75fwxxcn"
+        },
+        {
+          "Name": "label",
+          "Value": "WebIcons/thumbsup.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-YvYXhevXE9AZHeaqugG98ZNHDRl8BRzB5ZzxxMGndPs="
+        }
+      ]
+    },
+    {
+      "Route": "WebIcons/thumbsup.png",
+      "AssetFile": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\WebIcons\\thumbsup.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5920"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"YvYXhevXE9AZHeaqugG98ZNHDRl8BRzB5ZzxxMGndPs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 08 Mar 2025 10:55:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-YvYXhevXE9AZHeaqugG98ZNHDRl8BRzB5ZzxxMGndPs="
+        }
+      ]
+    },
+    {
+      "Route": "WebIcons/thumbsup2.png",
+      "AssetFile": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\WebIcons\\thumbsup2.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "12122"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"za9pIHGTMzW2WFcxH+5qIC8eJbom/QqWZBg3ysZU8P4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 08 Mar 2025 10:55:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-za9pIHGTMzW2WFcxH+5qIC8eJbom/QqWZBg3ysZU8P4="
+        }
+      ]
+    },
+    {
+      "Route": "WebIcons/thumbsup2.rqztixc39b.png",
+      "AssetFile": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\WebIcons\\thumbsup2.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "12122"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"za9pIHGTMzW2WFcxH+5qIC8eJbom/QqWZBg3ysZU8P4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 08 Mar 2025 10:55:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "rqztixc39b"
+        },
+        {
+          "Name": "label",
+          "Value": "WebIcons/thumbsup2.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-za9pIHGTMzW2WFcxH+5qIC8eJbom/QqWZBg3ysZU8P4="
+        }
+      ]
+    },
+    {
+      "Route": "WebIcons/up_arrow.dd6wd6v7ne.png",
+      "AssetFile": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\WebIcons\\up_arrow.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1057"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"QZ2ZOPMa4EU0ktmDbgTGYcfUivMDlqpBe5IiTLb2q6k=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 08 Mar 2025 10:55:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "dd6wd6v7ne"
+        },
+        {
+          "Name": "label",
+          "Value": "WebIcons/up_arrow.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-QZ2ZOPMa4EU0ktmDbgTGYcfUivMDlqpBe5IiTLb2q6k="
+        }
+      ]
+    },
+    {
+      "Route": "WebIcons/up_arrow.png",
+      "AssetFile": "C:\\Users\\ashwinir\\OneDrive - Jafferjee Brothers\\Desktop\\newGit\\new\\AI_Chat\\ChatBotApp\\wwwroot\\WebIcons\\up_arrow.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1057"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"QZ2ZOPMa4EU0ktmDbgTGYcfUivMDlqpBe5IiTLb2q6k=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 08 Mar 2025 10:55:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-QZ2ZOPMa4EU0ktmDbgTGYcfUivMDlqpBe5IiTLb2q6k="
+        }
+      ]
     }
   ]
 }

@@ -1,1 +1,1 @@
-C:\Users\Manith\Desktop\sh11\ChatBot_Website\FlintecChatBotApp\FlintecChatBotApp.csproj;x64
+C:\Users\ashwinir\OneDrive - Jafferjee Brothers\Desktop\newGit\new\AI_Chat\ChatBotApp\FlintecChatBotApp.csproj;x64

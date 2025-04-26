@@ -5,33 +5,79 @@
 
 
 
-          <div >
+
+<div>
 
 
-              
+    <h5 style="color:white">Language</h5>
+
+    <select class="form-control" @bind="Culture">
+        @foreach (var culture in cultures)
+        {
+            <option value="@culture">@culture</option>
+        }
+    </select>
 
 
-            <h5 style="color:white">Language</h5>
+    <h5 style="color:white">Country</h5>
 
-            <select class="form-control" @bind="Culture">
-                @foreach (var culture in cultures)
-                {
-                    <option value="@culture">@culture</option>
-                }
-            </select>
+    <select class="form-control">
+        @foreach (var country in countries)
+        {
+            <option value="@country">@country</option>
+        }
+    </select>
+
+</div>
 
 
-            <h5 style="color:white">Country</h5>
-            
-            <select class="form-control" >
-                @foreach (var country in countries)
-                {
-                    <option value="@country">@country</option>
-                }
-            </select>
 
-        </div>
- 
+@code {
+
+
+    public string customColor { get; set; } = "Yellow";
+
+private async Task ChangeTheme(ChangeEventArgs e)
+    {
+        var selectedValue = e.Value?.ToString();
+
+        switch (selectedValue)
+        {
+            case "1": // Light
+                await JS.InvokeVoidAsync("setBackgroundColor", "#ffffff");
+                break;
+            case "2": // Dark
+                await JS.InvokeVoidAsync("setBackgroundColor", "#33322e");
+                break;
+            case "3": // Company - Dark
+                await JS.InvokeVoidAsync("setBackgroundColor", "#222222");
+                break;
+            case "4": // Company - Light
+                await JS.InvokeVoidAsync("setBackgroundColor", "#f0f0f0");
+                break;
+        }
+    }
+
+    
+
+    [Inject]
+    IJSRuntime JS { get; set; }
+}
+
+
+
+
+<script>
+    function setBackgroundColor(color) {
+        document.documentElement.style.setProperty('--background1-color', color);
+        console.log(`$$$ -->  ${color}`   )
+    }
+</script>
+
+
+
+
+
 
 
 @*

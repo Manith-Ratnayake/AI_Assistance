@@ -30,9 +30,10 @@ namespace FlintecChatBotApp
             builder.Services.AddBlazorWebViewDeveloperTools();
     		builder.Logging.AddDebug();
             builder.Services.AddSingleton<Conversation>();
-           
+            //builder.Services.AddSingleton<Settings>();
 
-            
+
+
 #endif
 
             return builder.Build();

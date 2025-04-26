@@ -8,7 +8,6 @@
 }
 
 
-
 .icon-container[b-fn92favctl] {
     display: flex;
     align-items: center;
@@ -300,4 +299,26 @@ margin-left: 5px; /* Space between paragraph and dots
 
 .SuggestionBlock:hover[b-fn92favctl] {
     background-color: var(--background4-color);
+}
+
+
+
+
+
+.SomeTexTo[b-fn92favctl]{
+    color:red;
+}
+
+
+
+
+@media (max-width: 500px) {
+    body[b-fn92favctl] {
+        font-size: 16px;
+        background-color: lightblue;
+    }
+
+    .SomeTexTo[b-fn92favctl] {
+        color: green
+    }
 }

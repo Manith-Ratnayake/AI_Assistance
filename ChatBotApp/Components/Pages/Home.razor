@@ -1,18 +1,20 @@
 ﻿@page "/"
 @inject IJSRuntime JSRuntime
 @using FlintecChatBotApp.Components.Models;
+@using FlintecChatBotApp.Components.Pages; 
 @using System.Linq;
 @using Microsoft.JSInterop;
 @using System.Globalization
 @using Microsoft.Extensions.Localization
-@inject IStringLocalizer<MyStrings> Localizer
+@inject IStringLocalizer<MyStrings> Localizer 
+
 
 
 <div data-name="a" 
      style="background-color: azure; display: flex; height:100vh; ">
 
     <div data-name="b"
-         style="background-color:#1a1c1b; width:@(isBVisible ? "17%" : "0%"); height:100%;  transition: width 0.3s ease;
+         style="background-color:red; width:@(isBVisible ? "17%" : "0%"); height:100%;  transition: width 0.3s ease;
                 position:relative; overflow:hidden;
                 display:flex; flex-direction: column; ">
 
@@ -211,7 +213,7 @@
 
             }
 
-            <h4 data-name="ChatMessageWindowHeader" style="margin: 0; color:white; font-size:18px;"><b>ABBC</b></h4>
+            <h4 data-name="ChatMessageWindowHeader" style="margin: 0; color:white; font-size:18px;"><b>Flintec</b></h4>
         </div>
 
 
@@ -245,17 +247,9 @@
                                         <div class="editIconContainer" style="background-color:var(--background1-color); position:relative; flex-grow: 1; height:100%;">
 
                                             <div class="editMessage"
-                                                 style="cursor: pointer;
-                                                        border-radius: 50%;
-                                                        width: 25px; 
-                                                        height: 25px; 
-                                                        margin-right: 5px;
-                                                        padding: 10px; 
-                                                        position: absolute;
-                                                        right: 0;
-                                                        display:flex;
-                                                        justify-content:center;
-                                                        align-items:center;"
+                                                 style="cursor: pointer; border-radius: 50%; width: 25px; 
+                                                        height: 25px; margin-right: 5px; padding: 10px; position: absolute; right: 0;
+                                                        display:flex; justify-content:center; align-items:center;"
                                                 onmouseover="this.style.backgroundColor='grey'"
                                                 onmouseout="this.style.backgroundColor='transparent'"
                                                 @onclick="()=> ToggleEditMoo(item.index)">
@@ -268,7 +262,7 @@
 
                                             <div style=" margin-left:auto">
                                                     <p style="word-wrap: break-word; overflow-wrap: break-word; background-color: var(--background3-color); color:var(--font-color);
-                                                                padding: 9px 15px; border-radius: 19px;">
+                                                              padding: 9px 15px; border-radius: 19px;">
                                                         @item.message
                                                     </p>
                                                 </div>
@@ -527,6 +521,33 @@
 
 
 
+<script>
+
+@* window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => { *@
+@*     const newColorScheme = e.matches ? "dark" : "light"; *@
+@*     console.log('System theme changed to', newColorScheme); *@
+@* }); *@
+
+
+</script>
+
+
+
+
+
+
+
+
+@code {
+
+
+
+
+}
+
+
+
+
 <style>
     :root {
         --background1-color: #33322e;
@@ -537,6 +558,12 @@
         --image-filter: brightness(0) invert(1);
     }
 </style>
+
+
+
+
+
+
 
 @code {
     protected override async Task OnAfterRenderAsync(bool firstRender)
@@ -603,6 +630,12 @@
         isSettingsPopupVisible = false;
     }
 }
+
+
+
+
+
+
 
 
 
@@ -889,11 +922,11 @@
         }
     });
 
-    // Sample toggle button to open/close the popup (for demonstration purposes)
-    document.querySelector('.dots').addEventListener('click', function (event) {
-        event.stopPropagation(); // Prevent the click from triggering document's listener
-        TogglePopup(1); // Toggle popup visibility for demonstration
-    });
+    @* // Sample toggle button to open/close the popup (for demonstration purposes) *@
+    @* document.querySelector('.dots').addEventListener('click', function (event) { *@
+    @*     event.stopPropagation(); // Prevent the click from triggering document's listener *@
+    @*     TogglePopup(1); // Toggle popup visibility for demonstration *@
+    @* }); *@
 
 
 </script>
