@@ -4,7 +4,8 @@ using Microsoft.JSInterop;
 using System.Globalization;
 using FlintecChatBotApp.Components.Pages;
 
-
+using FlintecChatBotApp.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace FlintecChatBotApp
 {
@@ -23,18 +24,23 @@ namespace FlintecChatBotApp
    
 
             builder.Services.AddMauiBlazorWebView();
-            builder.Services.AddLocalization();
 
+            builder.Logging.AddDebug();
+
+            builder.Services.AddLocalization();
+            builder.Services.AddSingleton<Conversation>();
 
 #if DEBUG
             builder.Services.AddBlazorWebViewDeveloperTools();
     		builder.Logging.AddDebug();
-            builder.Services.AddSingleton<Conversation>();
-            //builder.Services.AddSingleton<Settings>();
 
 
 
 #endif
+            builder.Services.AddDbContext<AppDbContext>(options =>
+                options.UseSqlServer(
+                    "Server=localhost\\SQLEXPRESS;Database=FlintecAIAssistant;Trusted_Connection=True;TrustServerCertificate=True;"
+                ));
 
             return builder.Build();
         }

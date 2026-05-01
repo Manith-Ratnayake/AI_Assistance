@@ -9,11 +9,13 @@ using System.Threading.Tasks;
 
 namespace FlintecChatBotApp.Components.Models
 {
+
+
     public class Conversation
     {
-
         public List<List<string>> conversations = new();
-        public int pointingTab = 1;
+
+        public int pointingTab = -1;
 
         public List<string> GetConversation(int tabNumber)
         {
@@ -21,55 +23,51 @@ namespace FlintecChatBotApp.Components.Models
             return conversations[tabNumber];
         }
 
-
-        public void DeleteConversation(int tabNumber)
+        public void PrepareNewConversation()
         {
-            pointingTab = conversations.Count - 1;
-            conversations.RemoveAt(tabNumber);
+            pointingTab = -1;
         }
 
         public void CreateNewConversation()
         {
             List<string> newConversation = new List<string>();
             conversations.Add(newConversation);
-            pointingTab = conversations.Count() -1  ;
+            pointingTab = conversations.Count - 1;
         }
-
 
         public void UpdateConversation(string userQuestion, string userQuestionAnswer)
         {
+            if (pointingTab < 0 || pointingTab >= conversations.Count)
+            {
+                CreateNewConversation();
+            }
+
             conversations[pointingTab].Add(userQuestion);
             conversations[pointingTab].Add(userQuestionAnswer);
-
         }
 
-        public void EditMessage(int index)
+        public void DeleteConversation(int tabNumber)
         {
+            conversations.RemoveAt(tabNumber);
 
-        }
-
-
-
-
-        public override string ToString()
-        {
-            if (conversations == null || conversations.Count == 0 )
+            if (conversations.Count == 0)
             {
-                return "No conversations available.";
+                pointingTab = -1;
             }
-
-            string result = "";
-
-            for (int i = 0; i < conversations.Count; i++)
+            else
             {
-                result += $"Conversation {i }:\n";
-                result += "\n"; 
+                pointingTab = conversations.Count - 1;
             }
-
-            return result;
-
         }
     }
+
+
+
+
+
+
+
+
 }
 
 

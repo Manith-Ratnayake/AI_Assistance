@@ -9,6 +9,9 @@ using System.Text;
 using System.Threading.Tasks;
 
 
+using Microsoft.AspNetCore.Components;
+using FlintecChatBotApp.Data;
+ 
 namespace FlintecChatBotApp.Components.Pages
 {
     partial class Home

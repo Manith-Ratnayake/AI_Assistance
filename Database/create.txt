@@ -1,0 +1,46 @@
+CREATE DATABASE FlintecAIAssistant;
+USE FlintecAIAssistant;
+
+
+CREATE TABLE Conversations
+(
+    Id INT IDENTITY(1,1) PRIMARY KEY,
+    Title NVARCHAR(200) NOT NULL,
+    CreatedAt DATETIME2 NOT NULL DEFAULT GETDATE()
+);
+
+CREATE TABLE Messages
+(
+    Id INT IDENTITY(1,1) PRIMARY KEY,
+    ConversationId INT NOT NULL,
+    Sender NVARCHAR(20) NOT NULL,
+    Content NVARCHAR(MAX) NOT NULL,
+    CreatedAt DATETIME2 NOT NULL DEFAULT GETDATE()
+);
+
+
+
+
+Users
+
+userid
+username
+useremail
+
+
+
+Conversations
+
+convid
+Conv title
+Last updated Date
+Date created 
+userid
+
+Messages
+
+messageid
+role
+Content
+datetime
+conversationid
