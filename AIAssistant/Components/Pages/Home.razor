@@ -1,0 +1,2040 @@
+﻿@page "/"
+@inject IJSRuntime JSRuntime
+@using FlintecAIAssistant.Components.Models;
+@using FlintecAIAssistant.Components.Pages;
+@using System.Linq;
+@using Microsoft.JSInterop;
+@using System.Globalization
+@using Microsoft.Extensions.Localization
+@using FlintecAIAssistant.Components.Data
+
+
+
+
+
+<div class="app-shell">
+
+    <aside class="sidebar @(isBVisible ? "sidebar-open" : "sidebar-closed")">
+
+        @if (isBVisible)
+        {
+            <div class="sidebar-top">
+
+                <div class="brand-row">
+                    <h6 class="brand-title">Flintec AI</h6>
+
+                    <button class="icon-button tooltip-button tooltip-left-open"
+                            @onclick="bOff"
+                            data-tooltip="Close sidebar">
+                        <img src="WebIcons/sidebar.png" class="sidebar-icon" alt="Sidebar" />
+                    </button>
+                </div>
+
+                <button class="new-chat-button" @onclick="CreateNewConversation">
+                    <img src="WebIcons/new.png" class="new-chat-icon" alt="New Chat" />
+                    <span>New Chat</span>
+                </button>
+
+                <button class="saved-responses-button" @onclick="OpenSavedResponses">
+                    <img src="WebIcons/save.png" class="saved-responses-icon" alt="Saved Responses" />
+                    <span>Saved Responses</span>
+                </button>
+
+            </div>
+
+            <div class="tabs-area">
+
+                <div class="sidebar-section-label recents-section-label">
+                    Recents
+                </div>
+                @foreach (var dict in userConversation.conversations.Select((conversation, listIndex) => new { conversation, listIndex }))
+                {
+                    string firstMessage = dict.conversation.FirstOrDefault()?.Content ?? "New Chat";
+                    string title = firstMessage.Length > 27 ? firstMessage.Substring(0, 27) : firstMessage;
+                    bool hasUnread = unreadConversationIndexes.Contains(dict.listIndex);
+
+                    <div class="chat-tab-wrapper">
+
+                        <div class="chat-tab @(userConversation.pointingTab == dict.listIndex ? "chat-tab-active" : "")"
+                                @onclick="() => GetConversation(dict.listIndex)">
+
+                            <span class="chat-tab-title">@title</span>
+
+                            <span class="chat-unread-dot @(hasUnread ? "chat-unread-dot-visible" : "")"></span>
+
+                            <button class="tab-options-button"
+                                    @onclick:stopPropagation="true"
+                                    @onclick="() => TogglePopup(dict.listIndex)"
+                                    aria-label="Conversation options">
+                                <span class="tab-options-dots">⋯</span>
+                            </button>
+
+                        </div>
+
+                        @if (popupIndex == dict.listIndex)
+                        {
+                            <div class="chat-popup" @onclick:stopPropagation="true">
+
+                                <button class="popup-item" @onclick="() => RenameConversation(dict.listIndex)">
+                                    <img src="WebIcons/edit.png" class="popup-icon" />
+                                    <span>Rename</span>
+                                </button>
+
+                                <button class="popup-item danger" @onclick="() => DeleteConversationAndClose(dict.listIndex)">
+                                    <img src="WebIcons/delete.png" class="popup-icon delete-popup-icon" />
+                                    <span>Delete</span>
+                                </button>
+
+                            </div>
+                        }
+
+                    </div>
+                }
+
+            </div>
+
+            <div class="sidebar-bottom">
+                <Settings />
+            </div>
+        }
+
+    </aside>
+
+    @if (isBVisible)
+    {
+        <div class="mobile-sidebar-backdrop" @onclick="bOff"></div>
+    }
+
+    @if (popupIndex >= 0)
+    {
+        <div class="popup-outside-click-catcher" @onclick="CloseConversationPopup"></div>
+    }
+
+    <main class="main-area @(isBVisible ? "main-sidebar-open" : "main-full")">
+
+        @if (!isBVisible)
+        {
+            <button class="mobile-menu-button"
+                    @onclick="bOff"
+                    aria-label="Open sidebar">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        }
+
+        @if (!isBVisible)
+        {
+            <div class="chatgpt-left-rail">
+
+                <div class="rail-top">
+
+                    <button class="rail-icon-button tooltip-button logo-swap-button"
+                            @onclick="bOff"
+                            data-tooltip="Open sidebar">
+                        <img src="WebIcons/flintec_logo.png" class="rail-icon rail-logo-default" alt="Logo" />
+                        <img src="WebIcons/sidebar.png" class="rail-icon rail-logo-hover" alt="Open Sidebar" />
+                    </button>
+
+                    <button class="rail-icon-button tooltip-button"
+                            @onclick="CreateNewConversation"
+                            data-tooltip="New chat">
+                        <img src="WebIcons/new.png" class="rail-icon" alt="New Chat" />
+                    </button>
+
+                    <button class="rail-icon-button tooltip-button"
+                            @onclick="OpenSavedResponses"
+                            data-tooltip="Saved responses">
+                        <img src="WebIcons/save.png" class="rail-icon" alt="Saved Responses" />
+                    </button>
+
+                </div>
+
+                <div class="rail-bottom">
+
+                    <button type="button"
+                            class="rail-profile-button tooltip-button"
+                            data-tooltip="Settings"
+                            data-bs-toggle="modal"
+                            data-bs-target="#exampleModal"
+                            @onclick="() => ShowSettingsPopup(true)">
+                        @GetInitials(personName)
+                    </button>
+
+                </div>
+
+            </div>
+        }
+
+        @if (isSavedResponsesView)
+        {
+            <div class="saved-responses-page">
+
+                <div class="saved-responses-header">
+                    <h2>Saved Responses</h2>
+                    <p>Responses you saved will appear here.</p>
+                </div>
+
+                @if (savedResponses.Count == 0)
+                {
+                    <div class="saved-empty-state">
+                        <img src="WebIcons/save.png" class="saved-empty-icon" alt="Saved" />
+                        <h3>No saved responses yet</h3>
+                        <p>Click the save icon under any assistant response to save it here.</p>
+                    </div>
+                }
+                else
+                {
+                    <div class="saved-responses-list">
+
+                        @foreach (var saved in savedResponses.Select((response, index) => new { response, index }))
+                        {
+                            <div class="saved-response-card">
+
+                                <div class="saved-response-card-header">
+                                    <span>Saved Response @(saved.index + 1)</span>
+
+                                    <button class="assistant-action-button assistant-action-tooltip"
+                                            @onclick="async () => await CopySavedResponse(saved.response, saved.index)"
+                                            data-action-tooltip="Copy response"
+                                            aria-label="Copy saved response">
+                                        <img src="@(copySavedTickIndexes.Contains(saved.index) ? "WebIcons/tick.png" : "WebIcons/copy.png")"
+                                             class="assistant-action-icon"
+                                             alt="Copy" />
+                                    </button>
+                                </div>
+
+                                <div class="saved-response-text">
+                                    @saved.response
+                                </div>
+
+                            </div>
+                        }
+
+                    </div>
+                }
+
+            </div>
+        }
+        else if (messages?.Count > 0)
+        {
+            <div class="chat-page">
+
+                <div class="messagesScrollArea">
+
+                    @foreach (var item in messages.Select((message, index) => new { message, index }))
+                    {
+                        @if (item.message.Role == "user")
+                        {
+                            <div class="message-row user-message-row">
+                                <div class="message-content user-message-content">
+
+                                    <div class="user-message-wrap">
+
+                                        <div class="user-bubble">
+                                            @item.message.Content
+                                        </div>
+
+                                        <div class="user-message-actions">
+
+                                            <button class="user-message-action-button user-action-tooltip"
+                                                    @onclick="async () => await CopyUserMessage(item.message.Content, item.index)"
+                                                    data-user-action-tooltip="Copy"
+                                                    aria-label="Copy message">
+                                                <img src="@(copyTickMessageIndexes.Contains(item.index) ? "WebIcons/tick.png" : "WebIcons/copy.png")"
+                                                     class="user-message-action-icon"
+                                                     alt="Copy" />
+                                            </button>
+
+                                            <button class="user-message-action-button user-action-tooltip danger-user-action"
+                                                    @onclick="() => DeleteUserMessage(item.index)"
+                                                    data-user-action-tooltip="Delete"
+                                                    aria-label="Delete message">
+                                                <img src="WebIcons/delete.png"
+                                                     class="user-message-action-icon delete-user-action-icon"
+                                                     alt="Delete" />
+                                            </button>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        }
+                        else
+                        {
+                            <div class="message-row assistant-message-row">
+                                <div class="message-content assistant-message-content">
+
+                                    <div class="assistant-logo">
+                                        <img src="WebIcons/flintec_logo.png" class="assistant-logo-img" />
+                                    </div>
+
+                                    <div class="assistant-message-body">
+
+                                        @if (IsCurrentStreamingAssistantMessage(item.index, item.message) && string.IsNullOrWhiteSpace(item.message.Content))
+                                        {
+                                            <div class="thinking-card">
+                                                <span>Generating response</span>
+                                                <span class="thinking-dot"></span>
+                                                <span class="thinking-dot"></span>
+                                                <span class="thinking-dot"></span>
+                                            </div>
+                                        }
+                                        else if (IsConnectionErrorMessage(item.message.Content))
+                                        {
+                                            <div class="connection-error-toast message-error-toast">
+                                                <div class="connection-error-icon">!</div>
+                                                <div class="connection-error-text">
+                                                    @item.message.Content
+                                                </div>
+                                            </div>
+                                        }
+                                        else
+                                        {
+                                            <div class="assistant-text">
+                                                @item.message.Content
+                                            </div>
+                                        }
+
+                                        @if (!IsCurrentStreamingAssistantMessage(item.index, item.message) && !string.IsNullOrWhiteSpace(item.message.Content))
+                                        {
+                                            <div class="assistant-actions">
+
+                                                <button class="assistant-action-button assistant-action-tooltip"
+                                                        @onclick="async () => await CopyAssistantMessage(item.message.Content, item.index)"
+                                                        data-action-tooltip="Copy response"
+                                                        aria-label="Copy response">
+                                                    <img src="@(copyTickMessageIndexes.Contains(item.index) ? "WebIcons/tick.png" : "WebIcons/copy.png")"
+                                                         class="assistant-action-icon"
+                                                         alt="Copy" />
+                                                </button>
+
+                                                <button class="assistant-action-button assistant-action-tooltip"
+                                                        @onclick="async () => await SaveCurrentConversation(item.index)"
+                                                        data-action-tooltip="Save response"
+                                                        aria-label="Save response">
+                                                    <img src="@(saveTickMessageIndexes.Contains(item.index) ? "WebIcons/tick.png" : "WebIcons/save.png")"
+                                                         class="assistant-action-icon"
+                                                         alt="Save" />
+                                                </button>
+
+                                                <button class="assistant-action-button assistant-action-tooltip"
+                                                        @onclick="async () => await ReloadAssistantMessage(item.index)"
+                                                        data-action-tooltip="Try again"
+                                                        aria-label="Try again">
+                                                    <img src="WebIcons/reload.png" class="assistant-action-icon reload-action-icon" alt="Reload" />
+                                                </button>
+
+                                                <button class="assistant-source-button"
+                                                        @onclick="() => ShowSources(item.index)"
+                                                        aria-label="Sources">
+                                                    <img src="WebIcons/sources.png" class="assistant-source-icon" alt="Sources" />
+                                                    <span>Sources</span>
+                                                </button>
+
+                                            </div>
+                                        }
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        }
+                    }
+
+                </div>
+
+                <div class="input-area chat-bottom-input-area">
+                    <div class="input-holder chat-input-holder">
+
+                        <textarea class="textarAreaPlaceHolder"
+                                  @bind="userQuestion"
+                                  placeholder="Ask Anything"
+                                  rows="1"
+                                  oninput="adjustHeight(this)">
+                        </textarea>
+
+                        <button class="send-button send-tooltip-button @(isAssistantStreaming ? "send-button-disabled" : "")"
+                                @onclick="UserSubmitQuestion"
+                                disabled="@isAssistantStreaming"
+                                data-tooltip="Send Prompt">
+                            <img src="WebIcons/up_arrow.png" class="send-icon" alt="Submit" />
+                        </button>
+
+                    </div>
+                </div>
+
+                <div class="footer-note"></div>
+
+            </div>
+        }
+        else
+        {
+            <div class="home-page">
+
+                <div class="home-center">
+
+                    <div class="home-greeting-wrap">
+                        <p class="AnimationText SomeTexTo home-title">
+                            How Can I Help You?
+                        </p>
+                    </div>
+
+                    <div class="input-holder home-input-holder">
+
+                        <textarea class="textarAreaPlaceHolder"
+                                  @bind="userQuestion"
+                                  placeholder="Ask Anything"
+                                  rows="1"
+                                  oninput="adjustHeight(this)">
+                        </textarea>
+
+                        <button class="send-button send-tooltip-button @(isAssistantStreaming ? "send-button-disabled" : "")"
+                                @onclick="UserSubmitQuestion"
+                                disabled="@isAssistantStreaming"
+                                data-tooltip="Send Prompt">
+                            <img src="WebIcons/up_arrow.png" class="send-icon" alt="Submit" />
+                        </button>
+
+                    </div>
+
+                    <div class="suggestions-area">
+
+                        @foreach (var suggestion in suggestions)
+                        {
+                            <button class="SuggestionBlock suggestion-block"
+                                    @onclick="() => UpdateTheSearchBar(suggestion)">
+                                @suggestion
+                            </button>
+                        }
+
+                    </div>
+
+                </div>
+
+            </div>
+        }
+
+    </main>
+
+</div>
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content settings-modal">
+
+            <div class="settings-header">
+                <h1 class="settings-title">Settings</h1>
+
+                <button type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close">
+                </button>
+            </div>
+
+            <div class="modal-body">
+                <Settings />
+            </div>
+
+            <div class="settings-footer">
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<style>
+
+:root {
+    --background1-color: #212121;
+    --background2-color: #212121;
+    --background3-color: #2f2f2f;
+    --background4-color: #3a3a3a;
+    --background5-color: #424242;
+
+    --font-color: #ececec;
+    --font-muted-color: #b4b4b4;
+
+    --border-color: rgba(255, 255, 255, 0.10);
+    --border-color-strong: rgba(255, 255, 255, 0.16);
+    --sidebar-divider-color: rgba(255, 255, 255, 0.08);
+
+    --input-background: #2f2f2f;
+    --input-background-focus: #343434;
+
+    --suggestion-background: transparent;
+    --suggestion-hover-background: #2f2f2f;
+
+    --send-button-color: #ffffff;
+    --send-icon-filter: brightness(0);
+
+    --image-filter: brightness(0) invert(1);
+
+    --sidebar-width: clamp(220px, 17vw, 300px);
+    --rail-width: 64px;
+
+    --chat-width: clamp(520px, 62vw, 780px);
+    --message-width: clamp(520px, 62vw, 780px);
+
+    --left-icon-button-size: 36px;
+    --left-icon-size: 18px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: var(--background1-color);
+    color: var(--font-color);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.app-shell {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    overflow: hidden;
+    background-color: var(--background1-color);
+}
+
+.sidebar {
+    height: 100vh;
+    background-color: var(--background2-color);
+    transition: width 0.3s ease;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border-right: 1px solid var(--sidebar-divider-color);
+    z-index: 600;
+}
+
+.sidebar-open {
+    width: var(--sidebar-width);
+}
+
+.sidebar-closed {
+    width: 0;
+    border-right: none;
+}
+
+.popup-outside-click-catcher {
+    position: fixed;
+    top: 0;
+    left: var(--sidebar-width);
+    right: 0;
+    bottom: 0;
+    background-color: transparent;
+    z-index: 500;
+}
+
+.main-area {
+    height: 100vh;
+    background-color: var(--background1-color);
+    transition: width 0.3s ease;
+    overflow: hidden;
+    position: relative;
+}
+
+.main-sidebar-open {
+    width: calc(100% - var(--sidebar-width));
+}
+
+.main-full {
+    width: 100%;
+    padding-left: var(--rail-width);
+}
+
+.chatgpt-left-rail {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: var(--rail-width);
+    height: 100vh;
+    background-color: var(--background1-color);
+    border-right: 1px solid var(--sidebar-divider-color);
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 0;
+    overflow: visible;
+}
+
+.rail-top {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    overflow: visible;
+}
+
+.rail-bottom {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: visible;
+}
+
+.rail-icon-button,
+.icon-button {
+    width: var(--left-icon-button-size);
+    height: var(--left-icon-button-size);
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.15s ease, transform 0.15s ease;
+}
+
+.rail-icon-button:hover,
+.icon-button:hover {
+    background-color: var(--background3-color);
+}
+
+.rail-icon-button:active,
+.icon-button:active {
+    transform: scale(0.96);
+}
+
+.rail-icon,
+.sidebar-icon,
+.new-chat-icon,
+.saved-responses-icon {
+    width: var(--left-icon-size);
+    height: var(--left-icon-size);
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+    opacity: 0.9;
+}
+
+.rail-icon-button:hover .rail-icon,
+.icon-button:hover .sidebar-icon,
+.new-chat-button:hover .new-chat-icon,
+.saved-responses-button:hover .saved-responses-icon {
+    opacity: 1;
+}
+
+.logo-swap-button {
+    position: relative;
+}
+
+.rail-logo-default,
+.rail-logo-hover {
+    position: absolute;
+    width: var(--left-icon-size);
+    height: var(--left-icon-size);
+    object-fit: contain;
+    transition: opacity 0.12s ease;
+}
+
+.rail-logo-default {
+    opacity: 1;
+    filter: none;
+}
+
+.rail-logo-hover {
+    opacity: 0;
+    filter: brightness(0) invert(1);
+}
+
+.chatgpt-left-rail:hover .rail-logo-default {
+    opacity: 0;
+    filter: brightness(0);
+}
+
+.chatgpt-left-rail:hover .rail-logo-hover {
+    opacity: 1;
+}
+
+.rail-profile-button {
+    width: 30px;
+    height: 30px;
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    background-color: #ab68ff;
+    color: white;
+    font-size: 11px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+.rail-profile-button:hover {
+    opacity: 0.9;
+}
+
+.rail-profile-button:active {
+    transform: scale(0.96);
+}
+
+.sidebar-top {
+    padding: 14px 12px 10px 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+.brand-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 36px;
+    margin-bottom: 4px;
+}
+
+.brand-title {
+    margin: 0;
+    color: var(--font-color);
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+}
+
+.new-chat-button,
+.saved-responses-button {
+    width: 100%;
+    min-height: 42px;
+    border: none;
+    outline: none;
+    border-radius: 12px;
+    background-color: transparent;
+    color: var(--font-color);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0 12px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background-color 0.15s ease;
+}
+
+.new-chat-button:hover,
+.saved-responses-button:hover {
+    background-color: var(--background3-color);
+}
+
+.tabs-area {
+    flex: 1;
+    overflow-y: auto;
+    padding: 34px 0 84px 0;
+}
+
+.sidebar-section-label {
+    color: var(--font-color);
+    font-size: 14px;
+    font-weight: 600;
+    padding: 0 18px;
+    margin: 0 0 10px 0;
+    letter-spacing: 0.1px;
+}
+
+.recents-section-label {
+    margin-top: 8px;
+    margin-bottom: 12px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.chat-tab-wrapper {
+    width: 100%;
+    padding: 0 10px;
+    position: relative;
+}
+
+.chat-tab {
+    width: 100%;
+    min-height: 40px;
+    padding: 0 6px 0 12px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    color: var(--font-color);
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.15s ease;
+    position: relative;
+}
+
+.chat-tab:hover {
+    background-color: var(--background3-color);
+}
+
+.chat-tab-active {
+    background-color: #2a2a2a;
+}
+
+.chat-tab-active:hover {
+    background-color: #303030;
+}
+
+.chat-tab-title {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    flex: 1;
+    color: var(--font-color);
+}
+
+.chat-unread-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: #4f8cff;
+    opacity: 0;
+    flex-shrink: 0;
+    margin-right: 6px;
+    transition: opacity 0.15s ease;
+}
+
+.chat-unread-dot-visible {
+    opacity: 1;
+}
+
+.chat-tab:hover .chat-unread-dot {
+    opacity: 0;
+}
+
+.tab-options-button {
+    width: 30px;
+    height: 30px;
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    background-color: transparent;
+    color: var(--font-muted-color);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    flex-shrink: 0;
+    transition: background-color 0.15s ease, opacity 0.15s ease, color 0.15s ease;
+}
+
+.chat-tab:hover .tab-options-button,
+.chat-tab-active .tab-options-button {
+    opacity: 1;
+}
+
+.tab-options-button:hover {
+    background-color: var(--background4-color);
+    color: var(--font-color);
+}
+
+.tab-options-dots {
+    font-size: 22px;
+    line-height: 1;
+    transform: translateY(-2px);
+    letter-spacing: -1px;
+}
+
+.chat-popup {
+    position: absolute;
+    right: 16px;
+    top: 38px;
+    z-index: 1000;
+    width: 140px;
+    background-color: #2b2b2b;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 6px;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.45);
+}
+
+.popup-item {
+    width: 100%;
+    min-height: 34px;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    background-color: transparent;
+    color: var(--font-color);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0 8px;
+    cursor: pointer;
+    font-size: 14px;
+    text-align: left;
+}
+
+.popup-item:hover {
+    background-color: var(--background4-color);
+}
+
+.popup-item.danger {
+    color: #ff6b6b;
+}
+
+.popup-item.danger:hover {
+    background-color: rgba(220, 70, 70, 0.25);
+}
+
+.popup-icon {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+    filter: var(--image-filter);
+    opacity: 0.9;
+}
+
+.delete-popup-icon {
+    filter: brightness(0) saturate(100%) invert(53%) sepia(86%) saturate(1382%) hue-rotate(324deg) brightness(101%) contrast(101%);
+    opacity: 1;
+}
+
+.sidebar-bottom {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 64px;
+    min-height: 64px;
+    padding: 6px 10px;
+    background-color: var(--background2-color);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.settings-profile-button,
+.sidebar-profile-row {
+    width: 100%;
+    min-height: 48px;
+    border: none;
+    outline: none;
+    border-radius: 12px;
+    background-color: transparent;
+    color: var(--font-color);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 6px 10px;
+    text-align: left;
+    transition: background-color 0.15s ease;
+}
+
+.settings-profile-button:hover,
+.sidebar-profile-row:hover {
+    background-color: var(--background3-color);
+}
+
+.settings-profile-avatar,
+.sidebar-profile-logo {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #ab68ff;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 11px;
+    font-weight: 600;
+    flex-shrink: 0;
+}
+
+.settings-profile-text,
+.sidebar-profile-info {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4px;
+}
+
+.settings-profile-name,
+.sidebar-profile-name {
+    color: #ececec;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.1;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.settings-profile-subtitle,
+.sidebar-profile-subtitle {
+    color: #b4b4b4;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 1.1;
+    margin: 0;
+}
+
+.saved-responses-page {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--background1-color);
+    overflow-y: auto;
+    padding: 44px 16px 72px 16px;
+}
+
+.saved-responses-header {
+    width: var(--message-width);
+    margin: 0 auto 24px auto;
+}
+
+.saved-responses-header h2 {
+    margin: 0 0 8px 0;
+    font-size: 26px;
+    font-weight: 600;
+    color: var(--font-color);
+}
+
+.saved-responses-header p {
+    margin: 0;
+    color: var(--font-muted-color);
+    font-size: 14px;
+}
+
+.saved-empty-state {
+    width: var(--message-width);
+    min-height: 260px;
+    margin: 46px auto 0 auto;
+    border: 1px solid var(--border-color);
+    border-radius: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 28px;
+    background-color: rgba(255, 255, 255, 0.02);
+}
+
+.saved-empty-icon {
+    width: 26px;
+    height: 26px;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+    opacity: 0.8;
+    margin-bottom: 14px;
+}
+
+.saved-empty-state h3 {
+    margin: 0 0 8px 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--font-color);
+}
+
+.saved-empty-state p {
+    margin: 0;
+    color: var(--font-muted-color);
+    font-size: 14px;
+    max-width: 420px;
+    line-height: 1.5;
+}
+
+.saved-responses-list {
+    width: var(--message-width);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.saved-response-card {
+    width: 100%;
+    border: 1px solid var(--border-color);
+    border-radius: 18px;
+    background-color: rgba(255, 255, 255, 0.02);
+    padding: 16px 18px;
+}
+
+.saved-response-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 10px;
+    color: var(--font-muted-color);
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.saved-response-text {
+    color: var(--font-color);
+    line-height: 1.6;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    font-size: 15px;
+}
+
+.settings-modal {
+    background-color: #2b2b2b;
+    color: var(--font-color);
+    border-radius: 16px;
+    padding: 18px;
+    border: 1px solid var(--border-color);
+}
+
+.settings-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.settings-title {
+    color: var(--font-color);
+    font-size: 24px;
+    margin: 0;
+}
+
+.settings-footer {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 12px;
+}
+
+.btn-close {
+    filter: invert(1);
+}
+
+.chat-page {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background1-color);
+}
+
+.messagesScrollArea {
+    flex: 1;
+    overflow-y: auto;
+    padding: 26px 0 18px 0;
+    background-color: var(--background1-color);
+}
+
+.message-row {
+    width: 100%;
+    display: flex;
+    padding: 10px 16px;
+}
+
+.message-content {
+    width: var(--message-width);
+    margin: 0 auto;
+    display: flex;
+    gap: 12px;
+}
+
+.user-message-content {
+    justify-content: flex-end;
+}
+
+.assistant-message-content {
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.user-bubble {
+    max-width: 70%;
+    background-color: var(--background3-color);
+    color: var(--font-color);
+    padding: 10px 16px;
+    border-radius: 18px;
+    line-height: 1.5;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
+}
+
+.assistant-logo {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.assistant-logo-img {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+}
+
+.assistant-message-body {
+    max-width: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.assistant-text {
+    max-width: 100%;
+    color: var(--font-color);
+    line-height: 1.6;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
+    padding-top: 4px;
+}
+
+.thinking-card {
+    min-height: 42px;
+    padding: 10px 16px;
+    border-radius: 14px;
+    background-color: #2f2f2f;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--font-muted-color);
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.thinking-dot {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: var(--font-muted-color);
+    opacity: 0.35;
+    animation: thinkingPulse 1.2s infinite ease-in-out;
+}
+
+.thinking-dot:nth-child(2) {
+    animation-delay: 0s;
+}
+
+.thinking-dot:nth-child(3) {
+    animation-delay: 0.18s;
+}
+
+.thinking-dot:nth-child(4) {
+    animation-delay: 0.36s;
+}
+
+@@keyframes thinkingPulse {
+    0% {
+        opacity: 0.25;
+        transform: translateY(0);
+    }
+
+    40% {
+        opacity: 1;
+        transform: translateY(-3px);
+    }
+
+    80% {
+        opacity: 0.25;
+        transform: translateY(0);
+    }
+
+    100% {
+        opacity: 0.25;
+        transform: translateY(0);
+    }
+}
+
+.assistant-actions {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-top: 8px;
+    opacity: 1;
+}
+
+.assistant-action-button {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.15s ease;
+}
+
+.assistant-action-button:hover {
+    background-color: var(--background3-color);
+}
+
+.assistant-action-icon {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+    opacity: 0.78;
+}
+
+.assistant-action-button img[src*="tick"] {
+    width: 17px;
+    height: 17px;
+    opacity: 1;
+}
+
+.reload-action-icon {
+    width: 14px;
+    height: 14px;
+}
+
+.assistant-action-button:hover .assistant-action-icon {
+    opacity: 1;
+}
+
+.assistant-source-button {
+    height: 30px;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    background-color: transparent;
+    color: var(--font-muted-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 0 9px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 500;
+    transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.assistant-source-button:hover {
+    background-color: var(--background3-color);
+    color: var(--font-color);
+}
+
+.assistant-source-icon {
+    width: 15px;
+    height: 15px;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+    opacity: 0.78;
+}
+
+.assistant-source-button:hover .assistant-source-icon {
+    opacity: 1;
+}
+
+.assistant-action-tooltip::after {
+    content: attr(data-action-tooltip);
+    position: absolute;
+    left: 50%;
+    bottom: calc(100% + 8px);
+    transform: translateX(-50%) translateY(4px) scale(0.96);
+    background-color: #050505;
+    color: #ffffff;
+    padding: 7px 10px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.12s ease, transform 0.12s ease, visibility 0.12s ease;
+    z-index: 99999;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.35);
+}
+
+.assistant-action-tooltip:hover::after {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0) scale(1);
+}
+
+.input-area {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 12px 16px 8px 16px;
+    background-color: var(--background1-color);
+    flex-shrink: 0;
+}
+
+.input-holder {
+    width: var(--chat-width);
+    position: relative;
+    background-color: var(--input-background);
+    color: var(--font-color);
+    display: flex;
+    align-items: center;
+    border: none;
+    box-shadow: none;
+    overflow: visible;
+}
+
+.input-holder:focus-within {
+    border: none;
+}
+
+.chat-input-holder {
+    min-height: 56px;
+    max-height: 180px;
+    border-radius: 28px;
+    padding: 10px 64px 10px 20px;
+}
+
+.home-input-holder {
+    min-height: 58px;
+    max-height: 160px;
+    border-radius: 29px;
+    padding: 8px 58px 8px 24px;
+    margin: 0;
+}
+
+.textarAreaPlaceHolder {
+    width: 100%;
+    max-height: 150px;
+    resize: none;
+    overflow-y: hidden;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: var(--font-color);
+    padding: 0;
+    line-height: 24px;
+    font-size: 15px;
+    font-family: inherit;
+}
+
+.textarAreaPlaceHolder::placeholder {
+    color: #b4b4b4;
+}
+
+.send-button {
+    position: absolute;
+    right: 10px;
+    bottom: 8px;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: none;
+    transition: background-color 0.15s ease, transform 0.15s ease, opacity 0.15s ease;
+    overflow: visible;
+}
+
+.send-button:hover {
+    background-color: #f2f2f2;
+}
+
+.send-button:active {
+    transform: scale(0.96);
+}
+
+.send-button-disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+}
+
+.send-button-disabled:hover {
+    background-color: #ffffff;
+}
+
+.footer-note {
+    width: 100%;
+    padding: 4px 10px 8px 10px;
+    text-align: center;
+    color: #9b9b9b;
+    background-color: var(--background1-color);
+    font-size: 13px;
+    flex-shrink: 0;
+}
+
+.footer-note p {
+    margin: 0;
+    color: #9b9b9b;
+}
+
+.home-page {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--background1-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 16px 90px 16px;
+}
+
+.home-center {
+    width: var(--chat-width);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+}
+
+.home-greeting-wrap {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-title,
+.AnimationText.SomeTexTo {
+    font-size: clamp(28px, 3.2vw, 36px);
+    font-weight: 500;
+    color: #ececec;
+    margin: 0;
+    padding: 0;
+    line-height: 1.15;
+    text-align: center;
+    letter-spacing: -0.5px;
+}
+
+.suggestions-area {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    margin-top: 4px;
+    flex-wrap: wrap;
+}
+
+.suggestion-block {
+    min-height: 42px;
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    outline: none;
+    border-radius: 999px;
+    padding: 0 18px;
+    background-color:transparent !important;;
+    color: #f5f5f5;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: inherit;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    white-space: nowrap;
+    box-shadow: none;
+    transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.suggestion-block:hover {
+    background-color: #2f2f2f !important;
+    border-color: rgba(255, 255, 255, 0.24);
+}
+
+.connection-error-toast {
+    width: var(--chat-width);
+    margin: 0 auto 10px auto;
+    min-height: 46px;
+    border-radius: 14px;
+    background-color: rgba(239, 68, 68, 0.14);
+    border: 1px solid rgba(239, 68, 68, 0.45);
+    color: #ffb4b4;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px;
+    font-size: 14px;
+}
+
+.home-error-toast {
+    margin-bottom: 14px;
+}
+
+.connection-error-icon {
+    width: 22px;
+    height: 22px;
+    border-radius: 7px;
+    background-color: #ef4444;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 800;
+    flex-shrink: 0;
+}
+
+.connection-error-text {
+    color: #ffcccc;
+    line-height: 1.4;
+}
+
+.message-error-toast {
+    width: auto;
+    max-width: 100%;
+    margin: 0;
+}
+
+.chat-bottom-input-area {
+    flex-shrink: 0;
+    padding: 12px 16px 20px 16px;
+}
+
+.tooltip-button {
+    position: relative;
+}
+
+.tooltip-button::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    left: calc(100% + 12px);
+    top: 50%;
+    transform: translateY(-50%) scale(0.96);
+    background-color: #050505;
+    color: #ffffff;
+    padding: 8px 11px;
+    border-radius: 9px;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.12s ease, transform 0.12s ease, visibility 0.12s ease;
+    z-index: 99999;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.35);
+}
+
+.tooltip-button::before {
+    content: "";
+    position: absolute;
+    left: calc(100% + 6px);
+    top: 50%;
+    transform: translateY(-50%);
+    border-width: 6px;
+    border-style: solid;
+    border-color: transparent #050505 transparent transparent;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.12s ease, visibility 0.12s ease;
+    z-index: 99999;
+}
+
+.tooltip-button:hover::after,
+.tooltip-button:hover::before {
+    opacity: 1;
+    visibility: visible;
+}
+
+.tooltip-button:hover::after {
+    transform: translateY(-50%) scale(1);
+}
+
+.tooltip-left-open::after {
+    left: auto;
+    right: calc(100% + 12px);
+}
+
+.tooltip-left-open::before {
+    left: auto;
+    right: calc(100% + 6px);
+    border-color: transparent transparent transparent #050505;
+}
+
+.send-tooltip-button {
+    position: absolute;
+}
+
+.send-tooltip-button::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    right: 0;
+    bottom: calc(100% + 10px);
+    transform: translateY(4px) scale(0.96);
+    background-color: #050505;
+    color: #ffffff;
+    padding: 8px 11px;
+    border-radius: 9px;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.12s ease, transform 0.12s ease, visibility 0.12s ease;
+    z-index: 99999;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.35);
+}
+
+.send-tooltip-button::before {
+    content: "";
+    position: absolute;
+    right: 13px;
+    bottom: calc(100% + 4px);
+    border-width: 6px;
+    border-style: solid;
+    border-color: #050505 transparent transparent transparent;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.12s ease, visibility 0.12s ease;
+    z-index: 99999;
+}
+
+.send-tooltip-button:hover::after,
+.send-tooltip-button:hover::before {
+    opacity: 1;
+    visibility: visible;
+}
+
+.send-tooltip-button:hover::after {
+    transform: translateY(0) scale(1);
+}
+
+.textarAreaPlaceHolder::-webkit-scrollbar,
+.messagesScrollArea::-webkit-scrollbar,
+.tabs-area::-webkit-scrollbar {
+    width: 8px;
+}
+
+.textarAreaPlaceHolder::-webkit-scrollbar-track,
+.messagesScrollArea::-webkit-scrollbar-track,
+.tabs-area::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 10px;
+}
+
+.textarAreaPlaceHolder::-webkit-scrollbar-thumb,
+.messagesScrollArea::-webkit-scrollbar-thumb,
+.tabs-area::-webkit-scrollbar-thumb {
+    background: #555555;
+    border-radius: 10px;
+}
+
+.textarAreaPlaceHolder::-webkit-scrollbar-thumb:hover,
+.messagesScrollArea::-webkit-scrollbar-thumb:hover,
+.tabs-area::-webkit-scrollbar-thumb:hover {
+    background: #707070;
+}
+
+.textarAreaPlaceHolder,
+.messagesScrollArea,
+.tabs-area {
+    scrollbar-width: thin;
+    scrollbar-color: #555555 transparent;
+}
+
+.UserMessages:hover .editMessage {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    color: var(--font-color);
+}
+
+.mobile-menu-button {
+    display: none;
+}
+
+.mobile-sidebar-backdrop {
+    display: none;
+}
+
+@@media (max-width: 760px) {
+    :root {
+        --sidebar-width: min(82vw, 300px);
+        --rail-width: 0px;
+        --chat-width: min(94vw, 780px);
+        --message-width: min(94vw, 780px);
+        --left-icon-button-size: 34px;
+        --left-icon-size: 18px;
+    }
+
+    .chatgpt-left-rail {
+        display: none;
+    }
+
+    .main-full,
+    .main-sidebar-open,
+    .main-area {
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        z-index: 1200;
+        border-right: 1px solid rgba(255, 255, 255, 0.10);
+        box-shadow: 18px 0 45px rgba(0, 0, 0, 0.45);
+    }
+
+    .sidebar-open {
+        width: var(--sidebar-width);
+    }
+
+    .sidebar-closed {
+        width: 0;
+        border-right: none;
+        box-shadow: none;
+    }
+
+    .mobile-sidebar-backdrop {
+        display: block;
+        position: fixed;
+        inset: 0;
+        background-color: rgba(0, 0, 0, 0.45);
+        z-index: 1100;
+    }
+
+    .mobile-menu-button {
+        display: flex;
+        position: fixed;
+        top: 14px;
+        left: 14px;
+        width: 38px;
+        height: 38px;
+        border: none;
+        outline: none;
+        border-radius: 10px;
+        background-color: transparent;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+        z-index: 1000;
+        transition: background-color 0.15s ease;
+    }
+
+    .mobile-menu-button:hover {
+        background-color: var(--background3-color);
+    }
+
+    .mobile-menu-button span {
+        width: 18px;
+        height: 2px;
+        border-radius: 999px;
+        background-color: #ececec;
+        display: block;
+    }
+
+    .popup-outside-click-catcher {
+        left: 0;
+        z-index: 1050;
+    }
+
+    .home-page {
+        padding: 0 16px 80px 16px;
+        align-items: center;
+    }
+
+    .home-center {
+        gap: 22px;
+    }
+
+    .home-title,
+    .AnimationText.SomeTexTo {
+        font-size: 28px;
+        margin: 0;
+        line-height: 1.15;
+    }
+
+    .home-input-holder {
+        min-height: 58px;
+        border-radius: 30px;
+    }
+
+    .suggestions-area {
+        gap: 10px;
+        margin-top: 4px;
+    }
+
+    .suggestion-block {
+        width: auto; max-width: 100%; min-height: 40px;
+        padding: 0 16px;
+        font-size: 13px;
+    }
+
+    .user-message-wrap {
+        max-width: 84%;
+    }
+
+    .user-message-wrap .user-bubble {
+        max-width: 100%;
+    }
+
+    .assistant-message-body {
+        max-width: calc(100% - 48px);
+    }
+
+    .send-button {
+        width: 38px;
+        height: 38px;
+        right: 11px;
+        bottom: 10px;
+    }
+
+    .send-icon {
+        width: 21px;
+        height: 21px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+.user-message-wrap {
+    max-width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.user-message-wrap .user-bubble {
+    max-width: 100%;
+}
+
+.user-message-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 4px;
+    margin-top: 6px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-2px);
+    transition: opacity 0.15s ease, visibility 0.15s ease, transform 0.15s ease;
+}
+
+.user-message-row:hover .user-message-actions {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.user-message-action-button {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.15s ease;
+}
+
+.user-message-action-button:hover {
+    background-color: var(--background3-color);
+}
+
+.user-message-action-icon {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+    opacity: 0.72;
+}
+
+.user-message-action-button:hover .user-message-action-icon {
+    opacity: 1;
+}
+
+.user-message-action-button img[src*="tick"] {
+    width: 17px;
+    height: 17px;
+    opacity: 1;
+}
+
+.delete-user-action-icon {
+    filter: brightness(0) saturate(100%) invert(53%) sepia(86%) saturate(1382%) hue-rotate(324deg) brightness(101%) contrast(101%);
+    opacity: 0.9;
+}
+
+.danger-user-action:hover {
+    background-color: rgba(220, 70, 70, 0.20);
+}
+
+.user-action-tooltip::after {
+    content: attr(data-user-action-tooltip);
+    position: absolute;
+    left: 50%;
+    bottom: calc(100% + 8px);
+    transform: translateX(-50%) translateY(4px) scale(0.96);
+    background-color: #050505;
+    color: #ffffff;
+    padding: 7px 10px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.12s ease, transform 0.12s ease, visibility 0.12s ease;
+    z-index: 99999;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.35);
+}
+
+.user-action-tooltip:hover::after {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0) scale(1);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+</style>

@@ -1,0 +1,73 @@
+from fastapi import FastAPI
+from fastapi.responses import StreamingResponse
+from pydantic import BaseModel
+from transformers import AutoTokenizer, AutoModelForCausalLM, TextIteratorStreamer
+import torch
+from threading import Thread
+
+app = FastAPI()
+
+MODEL_PATH = "llm"
+
+device = "cuda" if torch.cuda.is_available() else "cpu"
+tokenizer = AutoTokenizer.from_pretrained(MODEL_PATH)
+
+model = AutoModelForCausalLM.from_pretrained(
+    MODEL_PATH,
+    dtype=torch.float32
+).to(device)
+
+model.eval()
+
+
+class ChatRequest(BaseModel):
+    question: str
+
+
+def stream_answer(question: str):
+    messages = [
+        {
+            "role": "user",
+            "content": question
+        }
+    ]
+
+    prompt = tokenizer.apply_chat_template(
+        messages,
+        tokenize=False,
+        add_generation_prompt=True
+    )
+
+    inputs = tokenizer(
+        prompt,
+        return_tensors="pt"
+    ).to(device)
+
+    streamer = TextIteratorStreamer(
+        tokenizer,
+        skip_prompt=True,
+        skip_special_tokens=True
+    )
+
+    generation_kwargs = {
+        **inputs,
+        "max_new_tokens": 256,
+        "temperature": 0.7,
+        "do_sample": True,
+        "pad_token_id": tokenizer.eos_token_id,
+        "streamer": streamer
+    }
+
+    thread = Thread(target=model.generate, kwargs=generation_kwargs)
+    thread.start()
+
+    for token in streamer:
+        yield token
+
+
+@app.post("/chat")
+def chat_stream(request: ChatRequest):
+    return StreamingResponse(
+        stream_answer(request.question),
+        media_type="text/plain"
+    )
