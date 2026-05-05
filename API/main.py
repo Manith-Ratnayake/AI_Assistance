@@ -1,4 +1,4 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, Request
 from fastapi.responses import StreamingResponse
 from pydantic import BaseModel
 from transformers import AutoTokenizer, AutoModelForCausalLM, TextIteratorStreamer
@@ -11,10 +11,9 @@ MODEL_PATH = "llm"
 
 device = "cuda" if torch.cuda.is_available() else "cpu"
 tokenizer = AutoTokenizer.from_pretrained(MODEL_PATH)
-
 model = AutoModelForCausalLM.from_pretrained(
     MODEL_PATH,
-    dtype=torch.float32
+    torch_dtype=torch.float32
 ).to(device)
 
 model.eval()
@@ -24,7 +23,7 @@ class ChatRequest(BaseModel):
     question: str
 
 
-def stream_answer(question: str):
+async def stream_answer(question: str, request: Request):
     messages = [
         {
             "role": "user",
@@ -62,12 +61,15 @@ def stream_answer(question: str):
     thread.start()
 
     for token in streamer:
+        if await request.is_disconnected():
+            break
+
         yield token
 
 
 @app.post("/chat")
-def chat_stream(request: ChatRequest):
+async def chat_stream(request: Request, chat_request: ChatRequest):
     return StreamingResponse(
-        stream_answer(request.question),
+        stream_answer(chat_request.question, request),
         media_type="text/plain"
     )

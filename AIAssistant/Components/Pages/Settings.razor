@@ -3,213 +3,54 @@
 @using Microsoft.JSInterop
 @inject IJSRuntime JS
 
-<button type="button"
-        class="sidebar-profile-row"
-        @onclick="OpenSettings">
+<div class="settings-body">
 
-    <div class="sidebar-profile-logo">
-        MR
+    <div class="settings-field">
+        <label>Name</label>
+
+        <input class="settings-input"
+               type="text"
+               placeholder="Enter your name" />
     </div>
 
-    <div class="sidebar-profile-info">
-        <div class="sidebar-profile-name">
-            Manith Ratnayake
-        </div>
+    <div class="settings-field">
+        <label>Custom Instruction</label>
 
-        <div class="sidebar-profile-subtitle">
-            Settings
-        </div>
+        <textarea class="settings-textarea"
+                  placeholder="Write how you want the assistant to respond"></textarea>
     </div>
 
-</button>
+    <div class="settings-field">
+        <label>Memory</label>
 
-@if (showSettings)
-{
-    <div class="settings-overlay" @onclick="CloseSettings">
+        <div class="memory-box">
 
-        <div class="settings-panel" @onclick:stopPropagation="true">
-
-            <div class="settings-header">
-                <h1 class="settings-title">Settings</h1>
-
-                <button type="button"
-                        class="settings-close-button"
-                        @onclick="CloseSettings">
-                    ×
-                </button>
+            <div class="memory-item">
+                <textarea class="memory-textarea"></textarea>
             </div>
 
-            <div class="settings-body">
+            <div class="memory-item">
+                <textarea class="memory-textarea"></textarea>
+            </div>
 
-                <div class="settings-field">
-                    <label>Name</label>
+            <div class="memory-item">
+                <textarea class="memory-textarea"></textarea>
+            </div>
 
-                    <input class="settings-input"
-                           type="text"
-                           placeholder="Enter your name" />
-                </div>
+            <div class="memory-item">
+                <textarea class="memory-textarea"></textarea>
+            </div>
 
-                <div class="settings-field">
-                    <label>Custom Instruction</label>
-
-                    <textarea class="settings-textarea"
-                              placeholder="Write how you want the assistant to respond"></textarea>
-                </div>
-
-                <div class="settings-field">
-                    <label>Memory</label>
-
-                    <div class="memory-box">
-
-                       <div class="memory-item">
-                            <textarea class="memory-textarea"></textarea>
-                        </div>
-
-                        <div class="memory-item">
-                            <textarea class="memory-textarea"></textarea>
-                        </div>
-
-                        <div class="memory-item">
-                            <textarea class="memory-textarea"></textarea>
-                        </div>
-
-                        <div class="memory-item">
-                            <textarea class="memory-textarea"></textarea>
-                        </div> 
-
-                        <div class="memory-item">
-                            <textarea class="memory-textarea"></textarea>
-                        </div>
-
-                    </div>
-                </div>
-
+            <div class="memory-item">
+                <textarea class="memory-textarea"></textarea>
             </div>
 
         </div>
-
     </div>
-}
+
+</div>
 
 <style>
-    .sidebar-profile-row {
-        width: 100%;
-        min-height: 62px;
-        border: none;
-        outline: none;
-        border-radius: 12px;
-        padding: 8px 10px;
-        background-color: transparent;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        color: #ececec;
-        cursor: pointer;
-        text-align: left;
-        font-family: inherit;
-    }
-
-    .sidebar-profile-row:hover {
-        background-color: #2f2f2f;
-    }
-
-    .sidebar-profile-logo {
-        width: 34px;
-        height: 34px;
-        border-radius: 50%;
-        background-color: #ab68ff;
-        color: #ffffff;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 13px;
-        font-weight: 600;
-        flex-shrink: 0;
-    }
-
-    .sidebar-profile-info {
-        min-width: 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .sidebar-profile-name {
-        color: #ececec;
-        font-size: 14px;
-        font-weight: 500;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-
-    .sidebar-profile-subtitle {
-        color: #9b9b9b;
-        font-size: 12px;
-        line-height: 1.2;
-    }
-
-    .settings-overlay {
-        position: fixed;
-        inset: 0;
-        z-index: 5000;
-        background-color: rgba(0, 0, 0, 0.72);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .settings-panel {
-        width: 620px;
-        height: 620px;
-        background-color: #212121;
-        border: 1px solid rgba(255, 255, 255, 0.14);
-        border-radius: 18px;
-        box-shadow: 0 24px 60px rgba(0, 0, 0, 0.55);
-        padding: 28px;
-        color: #ececec;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .settings-header {
-        height: 42px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin-bottom: 22px;
-        flex-shrink: 0;
-    }
-
-    .settings-title {
-        margin: 0;
-        color: #ececec;
-        font-size: 26px;
-        font-weight: 600;
-    }
-
-    .settings-close-button {
-        width: 38px;
-        height: 38px;
-        border: none;
-        outline: none;
-        border-radius: 10px;
-        background-color: transparent;
-        color: #cfcfcf;
-        font-size: 36px;
-        line-height: 1;
-        cursor: pointer;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding-bottom: 4px;
-    }
-
-    .settings-close-button:hover {
-        background-color: #333333;
-        color: #ffffff;
-    }
-
     .settings-body {
         height: calc(100% - 64px);
         display: flex;
@@ -344,12 +185,6 @@
     }
 
     @@media (max-width: 700px) {
-        .settings-panel {
-            width: 92vw;
-            height: 92vh;
-            padding: 22px;
-        }
-
         .settings-textarea {
             height: 110px;
         }
@@ -359,17 +194,3 @@
         }
     }
 </style>
-
-@code {
-    private bool showSettings = false;
-
-    private void OpenSettings()
-    {
-        showSettings = true;
-    }
-
-    private void CloseSettings()
-    {
-        showSettings = false;
-    }
-}

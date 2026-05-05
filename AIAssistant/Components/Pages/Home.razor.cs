@@ -7,6 +7,7 @@ using Microsoft.JSInterop;
 using System.IO;
 using System.Net.Http;
 using System.Net.Http.Json;
+using System.Threading;
 
 namespace FlintecAIAssistant.Components.Pages
 {
@@ -40,6 +41,7 @@ namespace FlintecAIAssistant.Components.Pages
         private bool isBVisible = true;
         private bool isSliderVisible = true;
         private bool isAssistantStreaming = false;
+        private CancellationTokenSource? currentGenerationCts;
 
         private int popupIndex = -1;
         private int? activeIndex = null;
@@ -69,21 +71,101 @@ namespace FlintecAIAssistant.Components.Pages
 
         private string personName = "Manith Ratnayake";
 
+        private bool isSourcesPanelOpen = false;
+        private int? selectedSourcesMessageIndex = null;
+
+        private ElementReference messagesScrollAreaRef;
+        private bool showScrollDownButton = false;
+        private DotNetObjectReference<Home>? scrollDotNetReference;
+
+        private sealed class ResponseSource
+        {
+            public string DocumentName { get; set; } = string.Empty;
+
+            public int PageNumber { get; set; }
+
+            public string Snippet { get; set; } = string.Empty;
+        }
+
+        private Dictionary<int, List<ResponseSource>> assistantMessageSources = new();
+
+        private List<ResponseSource> GetSelectedSources()
+        {
+            if (selectedSourcesMessageIndex is int messageIndex &&
+                assistantMessageSources.TryGetValue(messageIndex, out var sources))
+            {
+                return sources;
+            }
+
+            return new List<ResponseSource>();
+        }
+
+        private void EnsureDemoSources(int assistantMessageIndex)
+        {
+            if (assistantMessageSources.ContainsKey(assistantMessageIndex))
+            {
+                return;
+            }
+
+            assistantMessageSources[assistantMessageIndex] = new List<ResponseSource>
+            {
+                new ResponseSource
+                {
+                    DocumentName = "Password Policy.pdf",
+                    PageNumber = 2,
+                    Snippet = "Password requirements, password expiry rules, and account protection guidelines."
+                },
+                new ResponseSource
+                {
+                    DocumentName = "Backup Policy.pdf",
+                    PageNumber = 5,
+                    Snippet = "Backup frequency, storage location, retention period, and recovery responsibilities."
+                },
+                new ResponseSource
+                {
+                    DocumentName = "Microsoft 365 Policy.pdf",
+                    PageNumber = 3,
+                    Snippet = "Microsoft 365 usage rules, user responsibilities, and access control guidance."
+                }
+            };
+        }
 
 
 
 
-        public Task UserSubmitQuestion()
+
+        private async Task HandleSendOrStopButtonClick()
         {
             if (isAssistantStreaming)
             {
-                return Task.CompletedTask;
+                StopAssistantResponse();
+                return;
             }
 
+            await UserSubmitQuestion();
+        }
+
+        private void StopAssistantResponse()
+        {
+            currentGenerationCts?.Cancel();
+
+            isAssistantStreaming = false;
+            backgroundGeneratingConversationIndex = null;
+
+            StateHasChanged();
+        }
+
+        public async Task UserSubmitQuestion()
+        {
             if (string.IsNullOrWhiteSpace(userQuestion))
             {
-                return Task.CompletedTask;
+                return;
             }
+
+            currentGenerationCts?.Cancel();
+            currentGenerationCts?.Dispose();
+            currentGenerationCts = new CancellationTokenSource();
+            var cancellationToken = currentGenerationCts.Token;
 
             RemoveLastConnectionErrorMessage();
 
@@ -111,12 +193,40 @@ namespace FlintecAIAssistant.Components.Pages
             isSavedResponsesView = false;
             isAssistantStreaming = true;
 
-            int conversationIndex = userConversation.pointingTab;
+            int conversationIndex = AddOrSyncConversationImmediately(question);
             backgroundGeneratingConversationIndex = conversationIndex;
 
-            _ = GenerateAssistantResponseInBackground(question, assistantMessage, conversationIndex);
+            await InvokeAsync(StateHasChanged);
 
-            return InvokeAsync(StateHasChanged);
+            _ = Task.Run(async () =>
+            {
+                await GenerateAssistantResponseInBackground(question, assistantMessage, conversationIndex, cancellationToken);
+            }, cancellationToken);
+        }
+
+        private int AddOrSyncConversationImmediately(string question)
+        {
+            if (isChnagedAfterCreation == false)
+            {
+                userConversation.UpdateConversation(question, string.Empty);
+            }
+
+            int conversationIndex = userConversation.pointingTab;
+
+            if (conversationIndex >= 0 && conversationIndex < userConversation.conversations.Count)
+            {
+                userConversation.conversations[conversationIndex] = messages;
+            }
+
+            return conversationIndex;
+        }
+
+        private void SyncConversationMessages(int conversationIndex)
+        {
+            if (conversationIndex >= 0 && conversationIndex < userConversation.conversations.Count)
+            {
+                userConversation.conversations[conversationIndex] = messages;
+            }
         }
 
 
@@ -125,22 +235,29 @@ namespace FlintecAIAssistant.Components.Pages
 
 
 
-        private async Task GenerateAssistantResponseInBackground(string question, DbMessage assistantMessage, int conversationIndex)
+
+        private async Task GenerateAssistantResponseInBackground(
+            string question,
+            DbMessage assistantMessage,
+            int conversationIndex,
+            CancellationToken cancellationToken)
         {
             try
             {
-                await GenerateAnswerFromApiStreaming(question, assistantMessage);
+                await GenerateAnswerFromApiStreaming(question, assistantMessage, cancellationToken);
 
-                string finalAnswer = assistantMessage.Content;
-
-                if (IsConnectionErrorMessage(finalAnswer))
+                if (cancellationToken.IsCancellationRequested)
                 {
                     return;
                 }
 
-                if (isChnagedAfterCreation == false)
+                string finalAnswer = assistantMessage.Content;
+
+                SyncConversationMessages(conversationIndex);
+
+                if (IsConnectionErrorMessage(finalAnswer))
                 {
-                    userConversation.UpdateConversation(question, finalAnswer);
+                    return;
                 }
 
                 await SaveConversationToDatabase(question, finalAnswer);
@@ -150,24 +267,35 @@ namespace FlintecAIAssistant.Components.Pages
                     unreadConversationIndexes.Add(conversationIndex);
                 }
             }
+            catch (OperationCanceledException)
+            {
+            }
             catch (Exception)
             {
-                connectionErrorMessage = "Unable to connect. Check your internet connection and try again.";
-                assistantMessage.Content = connectionErrorMessage;
-
-                if (userConversation.pointingTab != conversationIndex || isSavedResponsesView)
+                if (!cancellationToken.IsCancellationRequested)
                 {
-                    unreadConversationIndexes.Add(conversationIndex);
+                    connectionErrorMessage = "Unable to connect. Check your internet connection and try again.";
+                    assistantMessage.Content = connectionErrorMessage;
+
+                    SyncConversationMessages(conversationIndex);
+
+                    if (userConversation.pointingTab != conversationIndex || isSavedResponsesView)
+                    {
+                        unreadConversationIndexes.Add(conversationIndex);
+                    }
                 }
             }
             finally
             {
-                isAssistantStreaming = false;
-                backgroundGeneratingConversationIndex = null;
+                if (!cancellationToken.IsCancellationRequested)
+                {
+                    isAssistantStreaming = false;
+                    backgroundGeneratingConversationIndex = null;
+                }
+
                 await InvokeAsync(StateHasChanged);
             }
         }
-
 
 
 
@@ -219,7 +347,10 @@ namespace FlintecAIAssistant.Components.Pages
 
 
 
-        private async Task GenerateAnswerFromApiStreaming(string question, DbMessage assistantMessage)
+        private async Task GenerateAnswerFromApiStreaming(
+            string question,
+            DbMessage assistantMessage,
+            CancellationToken cancellationToken)
         {
             var baseUrl = Configuration["LLM:BaseUrl"];
             var endpoint = Configuration["LLM:GenerateEndpoint"];
@@ -256,7 +387,8 @@ namespace FlintecAIAssistant.Components.Pages
 
             using var response = await httpClient.SendAsync(
                 request,
-                HttpCompletionOption.ResponseHeadersRead
+                HttpCompletionOption.ResponseHeadersRead,
+                cancellationToken
             );
 
             if (!response.IsSuccessStatusCode)
@@ -269,22 +401,37 @@ namespace FlintecAIAssistant.Components.Pages
 
             connectionErrorMessage = null;
 
-            await using var stream = await response.Content.ReadAsStreamAsync();
+            await using var stream = await response.Content.ReadAsStreamAsync(cancellationToken);
             using var reader = new StreamReader(stream);
 
-            char[] buffer = new char[256];
+            char[] buffer = new char[1024];
+            DateTime lastUiUpdate = DateTime.Now;
 
-            while (!reader.EndOfStream)
+            while (!cancellationToken.IsCancellationRequested)
             {
-                int count = await reader.ReadAsync(buffer, 0, buffer.Length);
+                int count = await reader.ReadAsync(buffer.AsMemory(0, buffer.Length), cancellationToken);
 
-                if (count > 0)
+                if (count <= 0)
                 {
-                    string chunk = new string(buffer, 0, count);
-                    assistantMessage.Content += chunk;
+                    break;
+                }
+
+                if (cancellationToken.IsCancellationRequested)
+                {
+                    break;
+                }
+
+                string chunk = new string(buffer, 0, count);
+                assistantMessage.Content += chunk;
+
+                if ((DateTime.Now - lastUiUpdate).TotalMilliseconds >= 120)
+                {
+                    lastUiUpdate = DateTime.Now;
                     await InvokeAsync(StateHasChanged);
                 }
             }
+
+            await InvokeAsync(StateHasChanged);
         }
 
         private bool IsCurrentStreamingAssistantMessage(int index, DbMessage message)
@@ -335,20 +482,35 @@ namespace FlintecAIAssistant.Components.Pages
             connectionErrorMessage = null;
             isAssistantStreaming = true;
 
+            currentGenerationCts?.Cancel();
+            currentGenerationCts?.Dispose();
+            currentGenerationCts = new CancellationTokenSource();
+            var cancellationToken = currentGenerationCts.Token;
+
             await InvokeAsync(StateHasChanged);
 
             try
             {
-                await GenerateAnswerFromApiStreaming(previousUserMessage.Content, newAssistantMessage);
+                await GenerateAnswerFromApiStreaming(previousUserMessage.Content, newAssistantMessage, cancellationToken);
+            }
+            catch (OperationCanceledException)
+            {
             }
             catch (Exception)
             {
-                connectionErrorMessage = "Unable to connect. Check your internet connection and try again.";
-                newAssistantMessage.Content = connectionErrorMessage;
+                if (!cancellationToken.IsCancellationRequested)
+                {
+                    connectionErrorMessage = "Unable to connect. Check your internet connection and try again.";
+                    newAssistantMessage.Content = connectionErrorMessage;
+                }
             }
             finally
             {
-                isAssistantStreaming = false;
+                if (!cancellationToken.IsCancellationRequested)
+                {
+                    isAssistantStreaming = false;
+                }
+
                 await InvokeAsync(StateHasChanged);
             }
         }
@@ -429,8 +591,11 @@ namespace FlintecAIAssistant.Components.Pages
             currentDbConversationId = null;
             popupIndex = -1;
             connectionErrorMessage = null;
+            showScrollDownButton = false;
 
             userConversation.PrepareNewConversation();
+
+            StateHasChanged();
         }
 
         public void UpdateConversation()
@@ -445,6 +610,7 @@ namespace FlintecAIAssistant.Components.Pages
             isSavedResponsesView = false;
 
             unreadConversationIndexes.Remove(tabNumber);
+            showScrollDownButton = false;
 
             messages = userConversation.GetConversation(tabNumber);
         }
@@ -468,6 +634,38 @@ namespace FlintecAIAssistant.Components.Pages
             {
                 await JSRuntime.InvokeVoidAsync("AnimateTextTyping", "AnimationText");
             }
+
+            if (messages?.Count > 0 && !isSavedResponsesView)
+            {
+                scrollDotNetReference ??= DotNetObjectReference.Create(this);
+
+                await JSRuntime.InvokeVoidAsync(
+                    "flintecChatScroll.register",
+                    messagesScrollAreaRef,
+                    scrollDotNetReference
+                );
+            }
+        }
+
+        [JSInvokable]
+        public async Task SetScrollDownButtonVisible(bool visible)
+        {
+            if (showScrollDownButton != visible)
+            {
+                showScrollDownButton = visible;
+                await InvokeAsync(StateHasChanged);
+            }
+        }
+
+        private async Task ScrollChatToBottom()
+        {
+            await JSRuntime.InvokeVoidAsync(
+                "flintecChatScroll.scrollToBottom",
+                messagesScrollAreaRef
+            );
+
+            showScrollDownButton = false;
+            await InvokeAsync(StateHasChanged);
         }
 
         private void ShowSettingsPopup(bool show)
@@ -630,11 +828,26 @@ namespace FlintecAIAssistant.Components.Pages
         {
             isSavedResponsesView = true;
             popupIndex = -1;
+            showScrollDownButton = false;
         }
 
         private void ShowSources(int assistantMessageIndex)
         {
-            JSRuntime.InvokeVoidAsync("console.log", $"Sources clicked for assistant message index: {assistantMessageIndex}");
+            if (isSourcesPanelOpen && selectedSourcesMessageIndex == assistantMessageIndex)
+            {
+                CloseSourcesPanel();
+                return;
+            }
+
+            selectedSourcesMessageIndex = assistantMessageIndex;
+            EnsureDemoSources(assistantMessageIndex);
+            isSourcesPanelOpen = true;
+        }
+
+        private void CloseSourcesPanel()
+        {
+            isSourcesPanelOpen = false;
+            selectedSourcesMessageIndex = null;
         }
 
 
